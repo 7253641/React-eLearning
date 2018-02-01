@@ -7,6 +7,8 @@ import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import Wrapper from '../components/Hoc/Hoc';
 import Contain from '../components/Contain/Contain';
 import Radium from 'radium';
+import Index from '../components/showListChapter/Index';
+
 const theme = createMuiTheme();
 class App extends Component {
   render() {
@@ -17,6 +19,7 @@ class App extends Component {
               <Wrapper>
                 <Route path="/" exact component={Contain} />
                 <Route path="/Content" component={Content}/>
+                <Route path="/index" component={Index}/>
               </Wrapper>
             </div>
         </BrowserRouter>

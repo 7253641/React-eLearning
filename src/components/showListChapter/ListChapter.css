@@ -1,0 +1,14 @@
+.root{
+    display: 'flex';
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow: hidden;
+    background-color: red;
+  }
+ .gridList{
+    width: 500px;
+    height: 450,
+  }
+  .icon {
+    color: 'rgba(255, 255, 255, 0.54)'
+  }
