@@ -1,0 +1,39 @@
+.footer {
+    width: 100%; 
+    margin: 0; 
+    background-color: #f0fafc;
+}
+.logo {
+    width: 100%;
+}
+.colLeft{
+    float: left;
+    width: 65%;
+}
+.colRight {
+    float: right;
+    width: 35%;
+}
+.colLeft ul {
+    list-style: none;
+    line-height: 1.5rem;
+    
+}
+.colLeft ul li {
+    display: inline;
+    margin-right: 40px;
+}
+.colRight ul {
+    list-style: none;
+    line-height: 1.5rem;
+}
+.colRight ul li {
+    display: inline;
+    margin-right: 30px;
+}
+.noteFooter {
+    clear: both;
+    text-align: center;
+    font-size: 0.5625rem;
+    line-height: 0.75rem;
+}
