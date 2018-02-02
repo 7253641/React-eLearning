@@ -1,0 +1,64 @@
+.header {
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    height: 130px;
+}
+.Nav {
+    text-align: right;
+    background-color: #1cbfbd;
+    width: 80%;
+    float: right; 
+    height: 130px; 
+    overflow: hidden;
+}
+.Nav ul {
+    list-style: none;
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+}
+.Nav ul li {
+    display: inline;
+    margin-left: 50px;
+}
+.Nav ul li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: aliceblue;
+    text-align: center;
+
+}
+.Nav ul li a:hover {
+    font-size: 20px;
+    color: rgb(215, 215, 216);
+}
+.Nav ul li .icon {
+    display: none;
+}
+.Logo {
+    width: 20%; 
+    float: left;
+    background-color: #1cbfbd;
+}
+@media screen and (max-width: 600px) {
+    .Nav a:not(:first-child) {display: none;}
+    .Nav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .Nav.responsive {position: relative;}
+    .Nav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .Nav.responsive a {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+
+}
