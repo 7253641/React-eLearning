@@ -8,15 +8,15 @@ class Index extends Component {
   render() {
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="default">
+        <AppBar position="static" color="primary">
           <Toolbar>
             <Typography type="title" color="inherit">
-                Category
+              Category
             </Typography>
           </Toolbar>
         </AppBar>
-        <ListChapter/>
-    </div>
+        <ListChapter />
+      </div>
     );
   }
 }
