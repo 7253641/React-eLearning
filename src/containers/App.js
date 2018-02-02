@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Video from '../components/Videos/index';
 import Classes from './App.css';
 import BrowserRouter from 'react-router-dom/BrowserRouter';
 import { Route } from 'react-router-dom';
@@ -20,6 +21,7 @@ class App extends Component {
                 <Route path="/" exact component={Contain} />
                 <Route path="/Content" component={Content}/>
                 <Route path="/index" component={Index}/>
+                <Route path="/video" component={Video}/>
               </Wrapper>
             </div>
         </BrowserRouter>
