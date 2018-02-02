@@ -14,13 +14,13 @@ class App extends Component {
     return (
       <MuiThemeProvider theme={theme}>
         <BrowserRouter>
-            <div className={Classes}>
-              <Wrapper>
-                <Route path="/" exact component={ListCourse} />
-                <Route path="/index" component={Index}/>
-                <Route path="/video" component={Video}/>
-              </Wrapper>
-            </div>
+          <div className={Classes}>
+            <Wrapper>
+              <Route path="/" exact component={ListCourse} />
+              <Route path="/index" component={Index} />
+              <Route path="/video" component={Video} />
+            </Wrapper>
+          </div>
         </BrowserRouter>
       </MuiThemeProvider>
     );
