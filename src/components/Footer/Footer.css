@@ -8,11 +8,9 @@
 }
 .colLeft{
     float: left;
-    width: 65%;
 }
 .colRight {
     float: right;
-    width: 35%;
 }
 .colLeft ul {
     list-style: none;
@@ -34,6 +32,17 @@
 .noteFooter {
     clear: both;
     text-align: center;
-    font-size: 0.5625rem;
+    font-size: 0.7rem;
     line-height: 0.75rem;
+}
+@media (max-width: 360px){
+    .colLeft {
+        width: 320px;
+    }
+}
+
+@media (max-width: 360px){
+    .colRight {
+        width: 320px;
+    }
 }
