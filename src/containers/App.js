@@ -6,24 +6,21 @@ import { Route } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import Wrapper from '../components/Hoc/Hoc';
 import Radium from 'radium';
-import ListChapter from '../components/showListChapter/Index';
-import Contain from '../components/Contain/Contain';
-import Content from '../components/Content/Content';
-
+import Index from '../components/showListChapter/Index';
+import ListCourse from '../components/Contain/ListCourse/ListCourse.js';
 const theme = createMuiTheme();
 class App extends Component {
   render() {
     return (
       <MuiThemeProvider theme={theme}>
         <BrowserRouter>
-          <div className={Classes}>
-            <Wrapper>
-              <Route path="/Index" component={ListChapter} />
-              <Route path="/" exact component={Contain} />
-              <Route path="/Content" component={Content}/>
-              <Route path="/video" component={Video}/>
-            </Wrapper>
-          </div>
+            <div className={Classes}>
+              <Wrapper>
+                <Route path="/" exact component={ListCourse} />
+                <Route path="/index" component={Index}/>
+                <Route path="/video" component={Video}/>
+              </Wrapper>
+            </div>
         </BrowserRouter>
       </MuiThemeProvider>
     );
