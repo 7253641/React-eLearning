@@ -3,7 +3,7 @@ import {
   COURSE_FETCHING_DATA,
   COURSE_FETCHING_DATA_SUCCESS,
   COURSE_FETCHING_DATA_FAILURE,
-} from '../constants/constantList';
+} from '../../constants/constantListCourse';
 
 export function getData() {
   return {

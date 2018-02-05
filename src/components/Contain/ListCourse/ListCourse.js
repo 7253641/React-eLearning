@@ -4,7 +4,7 @@ import Grid from 'material-ui/Grid';
 import './css/style.css';
 
 import { connect } from 'react-redux';
-import { fetchDatasWithRedux } from '../../../actions/actionListCourse';
+import { fetchDatasWithRedux } from '../../../actions/actionListCourse/actionListCourse.js';
 
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
@@ -22,7 +22,7 @@ class ListCourse extends Component {
           {this.props.data &&
             this.props.data.map((card, index) => {
               return (
-                <Grid key={card.id} item xs={3}>
+                <Grid key={card.id} item xs={12} sm={6} md={3}>
                   <Card className="card">
                     {/* <CardMedia
                         className='media'
