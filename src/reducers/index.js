@@ -1,8 +1,12 @@
 import { combineReducers } from 'redux';
 import chapters from './chapters';
 import dataReducer from '../reducers/dataReducer';
+import videoReducer from '../reducers/videoReducer';
+
 const myReducer = combineReducers({
-  chapters, dataReducer
-})
+  chapters,
+  dataReducer,
+  videoReducer,
+});
 
 export default myReducer;
