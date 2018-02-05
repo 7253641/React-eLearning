@@ -19,7 +19,7 @@ class Video extends Component {
   }
   render() {
     return (
-      <div style={{ width: '80%', margin: 'auto' }}>
+      <div>
         <Player autoPlay>
           <source src={this.props.videoURL} />
           <ControlBar>
