@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import chapters from './chapters';
-import dataReducer from '../reducers/dataReducer';
+import dataReducer from '../reducers/listCourseReducer';
 import videoReducer from '../reducers/videoReducer';
 
 const myReducer = combineReducers({
