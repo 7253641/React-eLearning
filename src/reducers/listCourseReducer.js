@@ -1,4 +1,7 @@
-import { COURSE_FETCHING_DATA, COURSE_FETCHING_DATA_SUCCESS } from '../constants/constantList';
+import {
+  COURSE_FETCHING_DATA,
+  COURSE_FETCHING_DATA_SUCCESS,
+} from '../constants/constantListCourse';
 
 const initialState = {
   data: [],
