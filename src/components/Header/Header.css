@@ -46,13 +46,31 @@ ul a {
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
-@media (max-width: 360px) {
+.iconMenu {
+    width: 100%;
+    background-color: #1cbfbd;
+}
+.iconMenu .dropDown{
+    color: aliceblue;
+    text-align: center;
+    width: 50px;
+}
+@media (max-width: 375px) {
     .Logo {
         width: 100%;
     }  
     .Nav {
         display: none;
-    } 
+    }
+    .iconMenu {
+        width: 100%;
+        background-color: #1cbfbd;
+    }
+    .iconMenu .dropDown{
+        color: aliceblue;
+        text-align: center;
+        width: 50px;
+    }
 }
 @media (max-width: 420px) {
     .Logo {
@@ -60,14 +78,16 @@ ul a {
     }  
     .Nav {
         display: none;
-    } 
+    }
+    .iconMenu {
+    }
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .Logo {
         width: 100%;
     }  
     .Nav {
         width: 100%;
         text-align: center;
-    } 
+    }
 }

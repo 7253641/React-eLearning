@@ -43,6 +43,11 @@ const header = props => {
             </li>
           </ul>
         </nav>
+        <div className="iconMenu">
+          <div className="dropDown" />Menu
+          <div className="dropDown" />
+          <div className="dropDown" />
+        </div>
       </div>
     </header>
   );
