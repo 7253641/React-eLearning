@@ -24,18 +24,18 @@ export function getDataFailure() {
   };
 }
 
-export function fetchDatasWithRedux(){
+export function fetchDatasWithRedux() {
   return function(dispatch) {
     dispatch(getData());
     return axios({
-      method: "get",
-      url: "http://10.10.1.65:8080/api-1.0/api/courses",
-      response: "json"
+      method: 'get',
+      url: 'http://10.10.1.65:8080/api-1.0/api/courses',
+      response: 'json',
     })
-    .then(response => {
-      let getThreeItems = response.data;
-      dispatch(getDataSuccess(getThreeItems));
-    })
-    .catch(response => dispatch(getDataFailure()));
-  }
+      .then(response => {
+        let getThreeItems = response.data;
+        dispatch(getDataSuccess(getThreeItems));
+      })
+      .catch(response => dispatch(getDataFailure()));
+  };
 }

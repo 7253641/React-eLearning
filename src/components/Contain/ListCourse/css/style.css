@@ -1,9 +1,6 @@
-.root {
-  flex-grow: 1;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto; }
+.MuiGrid-spacing-xs-24-27 {
+  width: 100% !important;
+  margin: 0 !important; }
 
 .paper {
   padding: 16;
