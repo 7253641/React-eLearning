@@ -12,7 +12,9 @@ import {
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
-
+import ShowListChapter from '../../showListChapter/ShowListChapter';
+import { Route, Link } from 'react-router-dom';
+import BrowserRouter from 'react-router-dom/BrowserRouter';
 class ListCourse extends Component {
   componentDidMount() {
     this.props.fetchDatasWithRedux();
@@ -25,15 +27,10 @@ class ListCourse extends Component {
             return (
               <Grid key={card.id} item xs={12} sm={6} md={3}>
                 <Card className="card">
-                  {/* <CardMedia
-                      className='media'
-                      image='http://www.liveanimalslist.com/reptiles/images/lizard-eye-view.jpg'
-                      title="Contemplative Reptile"
-                      /> */}
                   <CardContent>
                     <Typography type="headline" component="h2">
-                      {card.id}
-                      {card.title}
+                      {card.id}.
+                      {card.courseName}
                     </Typography>
                     <Typography component="p">{card.body}</Typography>
                   </CardContent>
@@ -43,6 +40,7 @@ class ListCourse extends Component {
                       color="primary"
                       onClick={() => this.onClickShowId(card.id)}
                     >
+                      {/* <Link to={'/listchapter' + card.id}>Chapter</Link> */}
                       Share
                     </Button>
                     <Button size="small" color="primary">
@@ -57,15 +55,15 @@ class ListCourse extends Component {
       </div>
     );
   }
-  onClickShowId = postId => {
-    this.props.postIdWithRedux(postId);
+  onClickShowId = id => {
+    this.props.postIdWithRedux(id);
   };
 }
 
 function mapStateToProps(state) {
   return {
     data: state.dataReducer.data,
-    // id: state.dataReducer.id,
+    //id: state.dataReducer.id,
   };
 }
 export default connect(mapStateToProps, {

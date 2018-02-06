@@ -14,5 +14,7 @@
 
 .media {
   height: 200px; }
-
+button a {
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */

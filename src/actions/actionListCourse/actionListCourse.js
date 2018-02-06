@@ -24,19 +24,17 @@ export function getDataFailure() {
   };
 }
 
-export function postIdWithRedux(postId) {
+export function postIdWithRedux(id) {
   return function(dispatch) {
     return axios
-      .post('https://jsonplaceholder.typicode.com/comments', {
-        postId: postId,
-        // params: {
-        //   postId: postId,
-        // },
+      .get('http://10.10.1.65:8080/api-1.0/api/courses', {
+        params: {
+          id: id,
+        },
       })
       .then(response => {
-        console.log('response', response);
-        let getThreeItems = response.id;
-        dispatch(getDataSuccess(getThreeItems));
+        console.log(response.data.id);
+        dispatch(getDataSuccess(response.id));
       })
       .catch(response => dispatch(getDataFailure()));
   };
@@ -46,7 +44,7 @@ export function fetchDatasWithRedux() {
   return function(dispatch) {
     return axios({
       method: 'get',
-      url: 'https://jsonplaceholder.typicode.com/posts',
+      url: 'http://10.10.1.65:8080/api-1.0/api/courses',
       response: 'json',
     })
       .then(response => {
