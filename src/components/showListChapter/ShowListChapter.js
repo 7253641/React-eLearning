@@ -4,11 +4,11 @@ import Typography from 'material-ui/Typography';
 import classes from './Index.css';
 import Toolbar from 'material-ui/Toolbar';
 import ListChapter from './ListChapter';
-class Index extends Component {
+class ShowListChapter extends Component {
   render() {
     return (
       <div className={classes.root}>
-        <AppBar position="static" color="primary">
+        <AppBar position="static" color="default">
           <Toolbar>
             <Typography type="title" color="inherit">
               Category
@@ -21,4 +21,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default ShowListChapter;
