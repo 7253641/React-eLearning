@@ -24,12 +24,29 @@ export function getDataFailure() {
   };
 }
 
+export function postIdWithRedux(postId) {
+  return function(dispatch) {
+    return axios
+      .post('https://jsonplaceholder.typicode.com/comments', {
+        postId: postId,
+        // params: {
+        //   postId: postId,
+        // },
+      })
+      .then(response => {
+        console.log('response', response);
+        let getThreeItems = response.id;
+        dispatch(getDataSuccess(getThreeItems));
+      })
+      .catch(response => dispatch(getDataFailure()));
+  };
+}
+
 export function fetchDatasWithRedux() {
   return function(dispatch) {
-    dispatch(getData());
     return axios({
       method: 'get',
-      url: 'http://10.10.1.65:8080/api-1.0/api/courses',
+      url: 'https://jsonplaceholder.typicode.com/posts',
       response: 'json',
     })
       .then(response => {

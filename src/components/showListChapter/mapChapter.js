@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as action from '../../actions/index';
+import * as action from '../../actions/ChapterAction/ChapterAction';
 import Chapters from './Chapters';
-// import callAPI from '../../api/apiCaller';
 class MapChapter extends Component {
   componentDidMount() {
     this.props.onFetchAllChapters();
@@ -11,7 +10,14 @@ class MapChapter extends Component {
     let chapters = null;
     if (this.props.chaptersData.chapters.length > 0) {
       chapters = this.props.chaptersData.chapters.map(chapter => {
-        return <Chapters key={chapter.id} title={chapter.title} />;
+        return (
+          <Chapters
+            key={chapter.id}
+            email={chapter.email}
+            name={chapter.name}
+            body={chapter.body}
+          />
+        );
       });
     }
     return <div>{chapters} </div>;
