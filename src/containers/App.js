@@ -17,7 +17,7 @@ class App extends Component {
           <div className={Classes}>
             <Wrapper>
               <Route path="/" exact component={ListCourse} />
-              <Route path="/index" component={Index} />
+              <Route path="/listchapter" component={Index} />
               <Route path="/video" component={Video} />
             </Wrapper>
           </div>

@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.css';
-// import logo from '../../Asset/LOGO1.png';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Radium from 'radium';
@@ -20,7 +19,7 @@ const header = props => {
     <header id="header">
       <div className="Logo">
         <ul>
-          <a href="/Home">E-LEARNING</a>
+          <a href="/">E-LEARNING</a>
         </ul>
       </div>
       <div className="Nav" dir="ltr">
@@ -30,7 +29,7 @@ const header = props => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/Index">Courses</a>
+              <a href="/ListChapter">ListChapter</a>
             </li>
             <li>
               <a href="/About Us">About Us</a>
@@ -43,11 +42,6 @@ const header = props => {
             </li>
           </ul>
         </nav>
-        <div className="iconMenu">
-          <div className="dropDown" />Menu
-          <div className="dropDown" />
-          <div className="dropDown" />
-        </div>
       </div>
     </header>
   );

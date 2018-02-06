@@ -60,5 +60,7 @@ function mapStateToProps(state) {
     data: state.dataReducer.data,
   };
 }
+
+
 // console.log({fetchDatasWithRedux})
 export default connect(mapStateToProps, { fetchDatasWithRedux })(ListCourse);
