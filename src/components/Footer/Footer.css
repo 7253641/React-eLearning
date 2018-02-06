@@ -1,18 +1,13 @@
-.footer {
+#footer {
     width: 100%; 
     margin: 0; 
     background-color: #f0fafc;
 }
-.logo {
-    width: 100%;
-}
 .colLeft{
     float: left;
-    width: 65%;
 }
 .colRight {
     float: right;
-    width: 35%;
 }
 .colLeft ul {
     list-style: none;
@@ -21,7 +16,7 @@
 }
 .colLeft ul li {
     display: inline;
-    margin-right: 40px;
+    margin: 20px;
 }
 .colRight ul {
     list-style: none;
@@ -29,11 +24,48 @@
 }
 .colRight ul li {
     display: inline;
-    margin-right: 30px;
+    margin: 20px;
 }
 .noteFooter {
     clear: both;
     text-align: center;
-    font-size: 0.5625rem;
+    font-size: 0.7rem;
     line-height: 0.75rem;
+}
+@media (max-width: 360px) {
+    .colLeft {
+        display: none;
+    }  
+    .colRight {  
+        float: none;
+        width: 100%;
+    } 
+}
+@media (max-width: 420px) {
+    .colLeft {
+        display: none;
+    }  
+    .colRight {
+        float: none;
+        width: 100%;
+    } 
+}
+@media (max-width: 600px) {
+    .colLeft {
+        width: 100%;
+        text-align: center;
+    }  
+    .colRight {
+        width: 100%;
+    } 
+}
+@media (max-width: 850px) {
+    .colLeft {
+        width: 100%; 
+        text-align: center;
+    }
+    .colRight {
+        width: 100%;
+        text-align: center;
+    }
 }

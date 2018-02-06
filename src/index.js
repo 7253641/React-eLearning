@@ -12,13 +12,10 @@ const store = configureStore();
 const ReduxApp = () => (
   <Provider store={store}>
     <MuiThemeProvider theme={theme}>
-        <App />
+      <App />
     </MuiThemeProvider>
   </Provider>
 );
 
-ReactDOM.render(
-  <ReduxApp />,
-  document.getElementById('root')
-);
+ReactDOM.render(<ReduxApp />, document.getElementById('root'));
 registerServiceWorker();
