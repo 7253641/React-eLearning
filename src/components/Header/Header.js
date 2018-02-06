@@ -4,6 +4,7 @@ import './Header.css';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
 import Radium from 'radium';
+
 // import Button from 'material-ui/Button';
 // import Divider from 'material-ui/Divider/Divider';
 const styles = theme => ({
@@ -30,7 +31,7 @@ const header = props => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/Index">Courses</a>
+              <a href="/Courses">Courses</a>
             </li>
             <li>
               <a href="/About Us">About Us</a>
@@ -44,7 +45,7 @@ const header = props => {
           </ul>
         </nav>
       </div>
-    </header>
+  </header>
   );
 };
 

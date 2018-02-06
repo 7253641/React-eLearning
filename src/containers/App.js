@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import Video from "../components/Videos/index";
-import Classes from "./App.css";
-import BrowserRouter from "react-router-dom/BrowserRouter";
-import { Route } from "react-router-dom";
-import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
-import Wrapper from "../components/Hoc/Hoc";
-import Radium from "radium";
-import Index from "../components/showListChapter/Index";
-import ListCourse from "../components/Contain/ListCourse/ListCourse.js";
+import React, { Component } from 'react';
+import Video from '../components/Videos/index';
+import Classes from './App.css';
+import BrowserRouter from 'react-router-dom/BrowserRouter';
+import { Route } from 'react-router-dom';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+import Wrapper from '../components/Hoc/Hoc';
+import Radium from 'radium';
+import Index from '../components/showListChapter/Index';
+import ListCourse from '../components/Contain/ListCourse/ListCourse.js';
 const theme = createMuiTheme();
 class App extends Component {
   render() {
