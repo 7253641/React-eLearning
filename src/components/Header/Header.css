@@ -24,7 +24,6 @@
     text-decoration: none;
     font-size: 20px;
     color: aliceblue;
-
 }
 .Nav ul li a:hover {
     font-size: 20px;
@@ -46,28 +45,43 @@ ul a {
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
 }
-@media (max-width: 360px) {
+.toggleMenu div {
+    height: 3px; 
+    color: aliceblue;
+    background-color: #1cbfbd;
+    clear: both;
+}
+@media (max-width: 375px) {
     .Logo {
         width: 100%;
-    }  
+    }
     .Nav {
         display: none;
-    } 
+    }
 }
-@media (max-width: 420px) {
+@media (max-width: 445px) {
     .Logo {
         width: 100%;
-    }  
+    }
     .Nav {
         display: none;
-    } 
+    }  
 }
-@media (max-width: 600px) {
+@media (max-width: 900px) {
     .Logo {
         width: 100%;
     }  
     .Nav {
         width: 100%;
         text-align: center;
-    } 
+    }
+}
+@media (min-width: 900px) {
+    .Logo {
+        width: 25%;
+    }  
+    .Nav {
+        width: 75%;
+        text-align: right;
+    }
 }

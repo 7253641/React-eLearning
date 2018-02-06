@@ -68,7 +68,6 @@ function mapStateToProps(state) {
     // id: state.dataReducer.id,
   };
 }
-
 export default connect(mapStateToProps, {
   fetchDatasWithRedux,
   postIdWithRedux,

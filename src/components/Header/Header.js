@@ -1,19 +1,17 @@
-import React from "react";
-import "./Header.css";
-// import logo from '../../Asset/LOGO1.png';
-import PropTypes from "prop-types";
-import { withStyles } from "material-ui/styles";
-import Radium from "radium";
-
+import React from 'react';
+import './Header.css';
+import PropTypes from 'prop-types';
+import { withStyles } from 'material-ui/styles';
+import Radium from 'radium';
 // import Button from 'material-ui/Button';
 // import Divider from 'material-ui/Divider/Divider';
 const styles = theme => ({
   input: {
-    display: "none"
+    display: 'none',
   },
   root: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 });
 
 const header = props => {
@@ -21,7 +19,7 @@ const header = props => {
     <header id="header">
       <div className="Logo">
         <ul>
-          <a href="/Home">E-LEARNING</a>
+          <a href="/">E-LEARNING</a>
         </ul>
       </div>
       <div className="Nav" dir="ltr">
@@ -31,7 +29,7 @@ const header = props => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/Courses">Courses</a>
+              <a href="/ListChapter">ListChapter</a>
             </li>
             <li>
               <a href="/About Us">About Us</a>
