@@ -1,9 +1,42 @@
+h1 {
+  font-size: 18px !important;
+  font-weight: bold !important; }
+
+.MuiCardActions-action-146 {
+  margin: 0 5px !important; }
+
+.p {
+  margin: auto !important;
+  height: 65px !important;
+  padding: 15px !important;
+  text-align: justify !important;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  line-height: 148% !important;
+  display: relative;
+  font-weight: none !important;
+  font-size: 14px !important; }
+
+.price {
+  font-size: 20px !important;
+  color: #2ca595 !important;
+  font-weight: bold !important;
+  font-family: "Times New Roman", Times, serif !important; }
+
 @media only screen and (min-width: 412px) and (max-width: 736px) {
   .MuiGrid-spacing-xs-24-26 > .MuiGrid-typeItem-4 {
     padding: 12px 34px 12px 34px !important; } }
 .MuiGrid-spacing-xs-24-26 {
   width: 100% !important;
   margin: 0 !important; }
+
+.imageShow img {
+  width: 100%;
+  height: 186px;
+  cursor: pointer; }
 
 .paper {
   padding: 16;

@@ -55,7 +55,12 @@ ul a:hover {
         width: 100%;
     }
     .Nav {
-        display: none;
+        display: 100%;
+    }
+    .Nav ul li {
+        display: inline;
+        margin: 10px;
+        color: aliceblue;
     }
 }
 @media (max-width: 445px) {
@@ -63,8 +68,13 @@ ul a:hover {
         width: 100%;
     }
     .Nav {
-        display: none;
-    }  
+        display: 100%;
+    } 
+    .Nav ul li {
+        display: inline;
+        margin: 10px;
+        color: aliceblue;
+    } 
 }
 @media (max-width: 900px) {
     .Logo {

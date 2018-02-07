@@ -12,7 +12,7 @@ export default function dataReducer(state = initialState, action) {
     case COURSE_FETCHING_DATA:
       return state;
     case COURSE_FETCHING_DATA_SUCCESS:
-      return { ...state, data: [...action.payload] };
+      return { ...state, data: [...action.item] };
     default:
       return state;
   }
