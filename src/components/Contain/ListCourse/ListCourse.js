@@ -38,6 +38,7 @@ class ListCourse extends Component {
                       {card.courseName}
                     </Typography>
                     <Typography className="p">{card.description}...</Typography>
+                    <Typography className="price">${card.price}.00</Typography>
                   </CardContent>
                   <CardActions>
                     <IconButton aria-label="Add to favorites">
@@ -47,6 +48,7 @@ class ListCourse extends Component {
                       <ShareIcon />
                     </IconButton>
                     <Button
+                      className="btn"
                       size="small"
                       variant="raised"
                       color="secondary"
@@ -54,7 +56,6 @@ class ListCourse extends Component {
                     >
                       Learn More
                     </Button>
-                    <Typography className="price">${card.price}.00</Typography>
                   </CardActions>
                 </Card>
               </Grid>

@@ -2,9 +2,6 @@ h1 {
   font-size: 18px !important;
   font-weight: bold !important; }
 
-.MuiCardActions-action-146 {
-  margin: 0 5px !important; }
-
 .p {
   margin: auto !important;
   height: 65px !important;
@@ -20,11 +17,15 @@ h1 {
   font-weight: none !important;
   font-size: 14px !important; }
 
+.group-icon {
+  text-align: left; }
+
 .price {
   font-size: 20px !important;
-  color: #2ca595 !important;
+  color: #a52c2c !important;
   font-weight: bold !important;
-  font-family: "Times New Roman", Times, serif !important; }
+  font-family: 'Times New Roman', Times, serif !important;
+  text-align: right !important; }
 
 @media only screen and (min-width: 412px) and (max-width: 736px) {
   .MuiGrid-spacing-xs-24-26 > .MuiGrid-typeItem-4 {
