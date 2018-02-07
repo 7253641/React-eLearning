@@ -8,10 +8,12 @@ import {
   fetchDatasWithRedux,
   postIdWithRedux,
 } from '../../../actions/actionListCourse/actionListCourse.js';
-
+import IconButton from 'material-ui/IconButton';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
+import FavoriteIcon from 'material-ui-icons/Favorite';
+import ShareIcon from 'material-ui-icons/Share';
 
 class ListCourse extends Component {
   componentDidMount() {
@@ -25,29 +27,34 @@ class ListCourse extends Component {
             return (
               <Grid key={card.id} item xs={12} sm={6} md={3}>
                 <Card className="card">
-                  {/* <CardMedia
-                      className='media'
-                      image='http://www.liveanimalslist.com/reptiles/images/lizard-eye-view.jpg'
-                      title="Contemplative Reptile"
-                      /> */}
+                  <div
+                    className="imageShow"
+                    onClick={() => this.onClickShowId(card.id)}
+                  >
+                    <img src={'http://10.10.1.65' + card.imageUrl} alt="logo" />
+                  </div>
                   <CardContent>
-                    <Typography type="headline" component="h2">
-                      {card.id}
-                      {card.title}
+                    <Typography type="headline" component="h1">
+                      {card.courseName}
                     </Typography>
-                    <Typography component="p">{card.body}</Typography>
+                    <Typography className="p">{card.description}...</Typography>
                   </CardContent>
                   <CardActions>
+                    <IconButton aria-label="Add to favorites">
+                      <FavoriteIcon />
+                    </IconButton>
+                    <IconButton aria-label="Share">
+                      <ShareIcon />
+                    </IconButton>
                     <Button
                       size="small"
-                      color="primary"
+                      variant="raised"
+                      color="secondary"
                       onClick={() => this.onClickShowId(card.id)}
                     >
-                      Share
-                    </Button>
-                    <Button size="small" color="primary">
                       Learn More
                     </Button>
+                    <Typography className="price">${card.price}.00</Typography>
                   </CardActions>
                 </Card>
               </Grid>

@@ -11,10 +11,10 @@ export function getData() {
   };
 }
 
-export function getDataSuccess(payload) {
+export function getDataSuccess(item) {
   return {
     type: COURSE_FETCHING_DATA_SUCCESS,
-    payload,
+    item,
   };
 }
 
@@ -27,16 +27,16 @@ export function getDataFailure() {
 export function postIdWithRedux(postId) {
   return function(dispatch) {
     return axios
-      .post('https://jsonplaceholder.typicode.com/comments', {
-        postId: postId,
-        // params: {
-        //   postId: postId,
-        // },
+      .get('https://jsonplaceholder.typicode.com/posts', {
+        // postId: postId,
+        params: {
+          postId: postId,
+        },
       })
       .then(response => {
-        console.log('response', response);
-        let getThreeItems = response.id;
-        dispatch(getDataSuccess(getThreeItems));
+        console.log('response: ', response);
+        console.log('response = ', response.data.postId);
+        dispatch(getDataSuccess(response.item));
       })
       .catch(response => dispatch(getDataFailure()));
   };
@@ -46,7 +46,7 @@ export function fetchDatasWithRedux() {
   return function(dispatch) {
     return axios({
       method: 'get',
-      url: 'https://jsonplaceholder.typicode.com/posts',
+      url: 'http://10.10.1.65:8080/api-1.0/api/courses/',
       response: 'json',
     })
       .then(response => {
