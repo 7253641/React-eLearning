@@ -81,7 +81,7 @@ const footer = () => {
       <div className="noteFooter">
         <p>
           "Nanodegree" is a registered trademark of E-Learning.
-          <span>© 2011–2018 Udacity, Inc.</span>
+          <span>© 2011–2018 E-Learning, Inc.</span>
         </p>
         <p>
           E-Learning is not an accredited university and we don't confer

@@ -9,19 +9,20 @@ import {
   PlaybackRateMenuButton,
   VolumeMenuButton,
 } from 'video-react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import '../../../node_modules/video-react/dist/video-react.css';
 import { videoActions } from '../../actions/videoActions/index';
 import { connect } from 'react-redux';
-
 class Video extends Component {
   componentDidMount() {
     this.props.fetchVideo();
   }
   render() {
     return (
-      <div>
-        <Player autoPlay>
-          <source src={this.props.videoURL} />
+      <div className="container-fluid">
+        <Player autoPlay={false}>
+          <source src="http://10.10.1.65/videos/007_Quick_Introduction_To%20Spring_Framework.mp4" />
           <ControlBar>
             <ReplayControl seconds={10} order={1.1} />
             <ForwardControl seconds={30} order={1.2} />
@@ -31,6 +32,12 @@ class Video extends Component {
             <VolumeMenuButton />
           </ControlBar>
         </Player>
+        <div className="video-thumbnail">
+          <video
+            controls
+            src="http://10.10.1.65/videos/007_Quick_Introduction_To%20Spring_Framework.mp4"
+          />
+        </div>
       </div>
     );
   }

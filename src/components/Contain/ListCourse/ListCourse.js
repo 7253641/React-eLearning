@@ -12,7 +12,7 @@ import {
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
-
+import { Link } from 'react-router-dom';
 class ListCourse extends Component {
   componentDidMount() {
     this.props.fetchDatasWithRedux();
@@ -32,8 +32,8 @@ class ListCourse extends Component {
                       /> */}
                   <CardContent>
                     <Typography type="headline" component="h2">
-                      {card.id}
-                      {card.title}
+                      {card.id}.
+                      {card.courseName}
                     </Typography>
                     <Typography component="p">{card.body}</Typography>
                   </CardContent>
@@ -43,7 +43,7 @@ class ListCourse extends Component {
                       color="primary"
                       onClick={() => this.onClickShowId(card.id)}
                     >
-                      Share
+                      <Link to="/listchapter">Share</Link>
                     </Button>
                     <Button size="small" color="primary">
                       Learn More

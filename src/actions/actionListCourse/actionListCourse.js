@@ -46,10 +46,11 @@ export function fetchDatasWithRedux() {
   return function(dispatch) {
     return axios({
       method: 'get',
-      url: 'https://jsonplaceholder.typicode.com/posts',
+      url: 'http://10.10.1.65:8080/api-1.0/api/courses',
       response: 'json',
     })
       .then(response => {
+        console.log(response.data);
         let getThreeItems = response.data;
         dispatch(getDataSuccess(getThreeItems));
       })
