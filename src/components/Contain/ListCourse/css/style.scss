@@ -1,30 +1,30 @@
-h1{
-  font-size: 18px!important;
-  font-weight: bold!important;
+.courseDescription{
+  margin: auto;
+  height: 55px;
+  padding: 15px;
+  margin-bottom: 15px;
+  text-align: justify;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 150%;
+  font-weight: none;
+  font-size: 15px;
 }
-.MuiCardActions-action-146{
-  margin: 0 5px !important;
+.priceCourse{
+  font-size: 24px;
+  color: rgb(165, 44, 44);
+  font-weight: bold;
+  font-family: Times New Roman;
+  text-align: right,
 }
-.p{
-  margin: auto !important;
-  height: 65px !important;
-  padding: 15px !important;
-  text-align: justify !important;
-  display: -webkit-box !important;
-  -webkit-line-clamp: 4 ;
-  -webkit-box-orient: vertical !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis !important;
-  line-height: 148% !important;
-  display: relative;
-  font-weight: none!important;
-  font-size: 14px!important;
-}
-.price{
-  font-size: 20px !important;
-  color:rgb(44, 165, 149)!important;
-  font-weight: bold!important;
-  font-family: 'Times New Roman', Times, serif !important
+.btn{
+  color: #fff!important;
+  background-color: #1CBFBD!important;
+  &:hover{
+    color: #fff!important;
+  background-color: #008080!important;
+  }
 }
 @media only screen and (min-width: 412px) and (max-width: 736px) {
   .MuiGrid-spacing-xs-24-26 > .MuiGrid-typeItem-4 {
@@ -34,7 +34,6 @@ h1{
 .MuiGrid-spacing-xs-24-26 {
   width: 100% !important;
   margin: 0 !important;
- 
 }
 .imageShow{
   img{
@@ -42,15 +41,4 @@ h1{
     height: 186px;
     cursor:pointer;
   } 
-}
-
-.paper {
-  padding: 16;
-  text-align: center;
-}
-.card {
-  max-width: 345px;
-}
-.media {
-  height: 200px;
 }

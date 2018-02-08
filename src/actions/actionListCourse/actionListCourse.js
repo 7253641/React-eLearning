@@ -3,6 +3,7 @@ import {
   COURSE_FETCHING_DATA,
   COURSE_FETCHING_DATA_SUCCESS,
   COURSE_FETCHING_DATA_FAILURE,
+  COURSE_RATINGS,
 } from '../../constants/constantListCourse';
 import * as types from '../../constants/sectionConstants';
 export function getData() {
@@ -24,6 +25,12 @@ export function getDataFailure() {
   };
 }
 
+export function getRating(star) {
+  return {
+    type: COURSE_RATINGS,
+    star,
+  };
+}
 export function fetchDatasWithRedux() {
   return function(dispatch) {
     return axios({
