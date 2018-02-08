@@ -1,0 +1,17 @@
+.video-thumbnail {
+  justify-content: space-around;
+  overflow: auto;
+  overflow-y: hidden;
+  display: inline;
+}
+video {
+  display: inline-block;
+  vertical-align: baseline;
+  width: 100%;
+}
+.video-thumbnail video {
+  width: 100px;
+  height: 100px;
+  padding: 1px;
+  border: 1px solid grey;
+}

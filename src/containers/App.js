@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Video from '../components/Videos/index';
+import MenuVideo from '../components/Videos/MenuVideo/MenuVideo';
 import Classes from './App.css';
 import BrowserRouter from 'react-router-dom/BrowserRouter';
 import { Route } from 'react-router-dom';
@@ -19,7 +19,7 @@ class App extends Component {
             <Wrapper>
               <Route path="/" exact component={ListCourse} />
               <Route path="/listchapter" component={ShowListChapter} />
-              <Route path="/video" component={Video} />
+              <Route path="/video" component={MenuVideo} />
             </Wrapper>
           </div>
         </BrowserRouter>

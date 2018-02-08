@@ -1,0 +1,11 @@
+.PersistentDrawer-root-3 {
+  width: 100%;
+  height: 100% !important;
+  z-index: 1;
+  overflow: hidden;
+  margin-top: 24px;
+}
+.MuiAppBar-colorPrimary-25 {
+  color: #fff;
+  background-color: #4aaac2 !important;
+}

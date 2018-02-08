@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 import './css/style.css';
-
 import { connect } from 'react-redux';
 import {
   fetchDatasWithRedux,
@@ -12,7 +11,7 @@ import {
 import IconButton from 'material-ui/IconButton';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
+// import Typography from 'material-ui/Typography';
 import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
 import ReactStars from 'react-stars';
@@ -21,7 +20,6 @@ class ListCourse extends Component {
   componentDidMount() {
     this.props.fetchDatasWithRedux();
   }
- 
   render() {
     return (
       <div className="root">
@@ -37,10 +35,18 @@ class ListCourse extends Component {
                     <img src={'http://10.10.1.65' + card.imageUrl} alt="logo" />
                   </div>
                   <CardContent>
-                    <Typography type="headline" component="h1">
-                      {card.courseName}
-                    </Typography>
-                    <Typography className="p">{card.description}..</Typography>
+                    <div className="courseName">
+                      <h1> {card.courseName}</h1>
+                    </div>
+                    <div
+                      className="courseDescription"
+                      style={{
+                        '-webkit-line-clamp': '2',
+                        '-webkit-box-orient': 'vertical',
+                      }}
+                    >
+                      {card.description}
+                    </div>
                     <Grid container spacing={16}>
                       <Grid item xs={6}>
                         <ReactStars
@@ -52,24 +58,26 @@ class ListCourse extends Component {
                         />
                       </Grid>
                       <Grid item xs={6}>
-                        <Typography className="price">
-                          ${card.price}.00
-                        </Typography>
+                        <div className="priceCourse"> ${card.price}.00</div>
                       </Grid>
                     </Grid>
                   </CardContent>
                   <CardActions>
                     <IconButton aria-label="Add to favorites">
-                      <FavoriteIcon />
+                      <FavoriteIcon style={{ 'font-size': '1.8em' }} />
                     </IconButton>
                     <IconButton aria-label="Share">
-                      <ShareIcon />
+                      <ShareIcon style={{ 'font-size': '1.8em' }} />
                     </IconButton>
                     <Button
                       className="btn"
                       size="small"
                       variant="raised"
                       onClick={() => this.onClickShowId(card.id)}
+                      style={{
+                        'font-size': '16px',
+                        'text-transform': 'lowercase',
+                      }}
                     >
                       Learn More
                     </Button>
