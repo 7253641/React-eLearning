@@ -7,6 +7,7 @@ import { connect } from 'react-redux';
 import {
   fetchDatasWithRedux,
   postIdWithRedux,
+  getRating,
 } from '../../../actions/actionListCourse/actionListCourse.js';
 import IconButton from 'material-ui/IconButton';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
@@ -14,11 +15,13 @@ import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
+import ReactStars from 'react-stars';
 
 class ListCourse extends Component {
   componentDidMount() {
     this.props.fetchDatasWithRedux();
   }
+ 
   render() {
     return (
       <div className="root">
@@ -37,8 +40,23 @@ class ListCourse extends Component {
                     <Typography type="headline" component="h1">
                       {card.courseName}
                     </Typography>
-                    <Typography className="p">{card.description}...</Typography>
-                    <Typography className="price">${card.price}.00</Typography>
+                    <Typography className="p">{card.description}..</Typography>
+                    <Grid container spacing={16}>
+                      <Grid item xs={6}>
+                        <ReactStars
+                          className="staring"
+                          count={5}
+                          onChange={this.ratingChanged}
+                          size={24}
+                          color2={'#ffd700'}
+                        />
+                      </Grid>
+                      <Grid item xs={6}>
+                        <Typography className="price">
+                          ${card.price}.00
+                        </Typography>
+                      </Grid>
+                    </Grid>
                   </CardContent>
                   <CardActions>
                     <IconButton aria-label="Add to favorites">
@@ -51,7 +69,6 @@ class ListCourse extends Component {
                       className="btn"
                       size="small"
                       variant="raised"
-                      color="secondary"
                       onClick={() => this.onClickShowId(card.id)}
                     >
                       Learn More
@@ -68,15 +85,19 @@ class ListCourse extends Component {
   onClickShowId = postId => {
     this.props.postIdWithRedux(postId);
   };
+  ratingChanged = rating => {
+    console.log(this.props.getRating(rating));
+  };
 }
 
 function mapStateToProps(state) {
   return {
     data: state.dataReducer.data,
-    // id: state.dataReducer.id,
+    rating: state.dataReducer.rating,
   };
 }
 export default connect(mapStateToProps, {
   fetchDatasWithRedux,
   postIdWithRedux,
+  getRating,
 })(ListCourse);

@@ -3,6 +3,7 @@ import {
   COURSE_FETCHING_DATA,
   COURSE_FETCHING_DATA_SUCCESS,
   COURSE_FETCHING_DATA_FAILURE,
+  COURSE_RATINGS,
 } from '../../constants/constantListCourse';
 
 export function getData() {
@@ -21,6 +22,13 @@ export function getDataSuccess(item) {
 export function getDataFailure() {
   return {
     type: COURSE_FETCHING_DATA_FAILURE,
+  };
+}
+
+export function getRating(star) {
+  return {
+    type: COURSE_RATINGS,
+    star,
   };
 }
 
