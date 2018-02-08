@@ -1,35 +1,35 @@
-import * as types from '../../constants/chapterConstants';
-import axios from 'axios';
+// import * as types from '../../constants/sectionConstants';
+// import axios from 'axios';
 
-export const getData = () => {
-  return {
-    type: types.FETCHING_DATA,
-  };
-};
+// export const getDataSection = () => {
+//   return {
+//     type: types.FETCHING_DATA_SECTION,
+//   };
+// };
 
-export const getDataSuccess = chapters => {
-  return {
-    type: types.FETCHING_DATA_SUCCESS,
-    chapters,
-  };
-};
+// export const getDataSuccessSection = chapters => {
+//   return {
+//     type: types.FETCHING_DATA_SUCCESS_SECTION,
+//     chapters,
+//   };
+// };
 
-export const getDataFailure = () => {
-  return {
-    type: types.FETCHING_DATA_FAILURE,
-  };
-};
+// export const getDataFailureSection = () => {
+//   return {
+//     type: types.FETCHING_DATA_FAILURE_SECTION,
+//   };
+// };
 
-export const fetchData = () => {
-  return dispatch => {
-    dispatch(getData());
-    axios
-      .get('https://jsonplaceholder.typicode.com/posts/1/comments')
-      .then(response => {
-        dispatch(getDataSuccess(response.data));
-      })
-      .catch(function(error) {
-        console.log(error);
-      });
-  };
-};
+// export const fetchDataSection = () => {
+//   return dispatch => {
+//     dispatch(getDataSection());
+//     axios
+//       .get('https://jsonplaceholder.typicode.com/posts')
+//       .then(response => {
+//         dispatch(getDataSuccessSection(response.data));
+//       })
+//       .catch(function(error) {
+//         console.log(error);
+//       });
+//   };
+// };
