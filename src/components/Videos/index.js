@@ -32,12 +32,12 @@ class Video extends Component {
             <VolumeMenuButton />
           </ControlBar>
         </Player>
-        <div className="video-thumbnail">
+        {/* <div className="video-thumbnail">
           <video
             controls
             src="http://10.10.1.65/videos/007_Quick_Introduction_To%20Spring_Framework.mp4"
           />
-        </div>
+        </div> */}
       </div>
     );
   }

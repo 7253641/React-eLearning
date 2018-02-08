@@ -29,7 +29,7 @@ const header = props => {
               <a href="/">Home</a>
             </li>
             <li>
-              <a href="/ListChapter">ListChapter</a>
+              <a href="/ListChapter">Chapters</a>
             </li>
             <li>
               <a href="/Video">Video</a>
