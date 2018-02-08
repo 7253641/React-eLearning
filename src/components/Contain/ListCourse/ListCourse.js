@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 // import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 import './css/style.css';
-
 import { connect } from 'react-redux';
 import {
   fetchDatasWithRedux,
@@ -14,7 +13,6 @@ import Button from 'material-ui/Button';
 import Typography from 'material-ui/Typography';
 import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
-
 class ListCourse extends Component {
   componentDidMount() {
     this.props.fetchDatasWithRedux();

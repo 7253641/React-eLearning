@@ -1,12 +1,14 @@
 import React from 'react';
 import './Footer.css';
-import logo from '../../Asset/footer.png';
 import Radium from 'radium';
 const footer = () => {
   return (
     <footer className="footer-distributed">
       <div className="footer-left">
-        <img src={logo} alt="logo" />
+        <h3>
+          Education
+          <span> Everywhere</span>
+        </h3>
         <p className="footer-links">
           <a href="/">Home</a>
           |
