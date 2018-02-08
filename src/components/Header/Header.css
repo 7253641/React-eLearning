@@ -3,6 +3,26 @@
     margin: 0 auto;
     height: 100px; 
 }
+.Logo {
+    width: 25%; 
+    float: left;
+    background-color: #1cbfbd;
+    text-align: center;
+    height: 100px;
+}
+ul {
+    padding: 30px 0;
+}
+ul a {
+    color: aliceblue;
+    text-decoration: none;  
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul a:hover {
+    color:rgb(215, 215, 216);
+    text-decoration: none;  
+}
 .Nav {
     background-color: #1cbfbd;
     width: 75%;
@@ -19,44 +39,28 @@
 .Nav ul li {
     display: inline;
     margin: 20px;
+    color: aliceblue;
 }
 .Nav ul li a {
     text-decoration: none;
     font-size: 20px;
-    color: aliceblue;
 }
 .Nav ul li a:hover {
     font-size: 20px;
     color: rgb(215, 215, 216);
 }
-.Logo {
-    width: 25%; 
-    float: left;
-    background-color: #1cbfbd;
-    text-align: center;
-    height: 100px;
-}
-ul {
-    padding: 20px 0;
-}
-ul a {
-    color: aliceblue;
-    text-decoration: none;  
-    font-size: 25px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-.toggleMenu div {
-    height: 3px; 
-    color: aliceblue;
-    background-color: #1cbfbd;
-    clear: both;
-}
+
 @media (max-width: 375px) {
     .Logo {
         width: 100%;
     }
     .Nav {
-        display: none;
+        display: 100%;
+    }
+    .Nav ul li {
+        display: inline;
+        margin: 5px;
+        color: aliceblue;
     }
 }
 @media (max-width: 445px) {
@@ -64,8 +68,13 @@ ul a {
         width: 100%;
     }
     .Nav {
-        display: none;
-    }  
+        display: 100%;
+    } 
+    .Nav ul li {
+        display: inline;
+        margin: 10px;
+        color: aliceblue;
+    } 
 }
 @media (max-width: 900px) {
     .Logo {

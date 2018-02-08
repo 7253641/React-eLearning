@@ -6,7 +6,7 @@ export const fetchVideo = () => dispatch => {
   try {
     /* replace this by our api link */
     // const users = await axios
-    //   .get('https://jsonplaceholder.typicode.com/users')
+    //   .get('http://10.10.1.65' + video.id)
     //   .then(response => {
     //     let list = response.data.splice(0, 3);
     //     return list;

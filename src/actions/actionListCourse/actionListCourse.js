@@ -11,10 +11,10 @@ export function getData() {
   };
 }
 
-export function getDataSuccess(payload) {
+export function getDataSuccess(item) {
   return {
     type: COURSE_FETCHING_DATA_SUCCESS,
-    payload,
+    item,
   };
 }
 
@@ -32,6 +32,7 @@ export function fetchDatasWithRedux() {
       response: 'json',
     })
       .then(response => {
+        console.log(response.data);
         let getThreeItems = response.data;
         dispatch(getDataSuccess(getThreeItems));
       })
