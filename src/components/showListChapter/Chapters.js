@@ -8,6 +8,7 @@ import ExpansionPanel, {
 import Typography from 'material-ui/Typography';
 import MapVideo from './MapVideo';
 import { connect } from 'react-redux';
+import Video from './Video';
 
 const styles = theme => ({
   root: {
@@ -29,6 +30,7 @@ class Chapters extends Component {
     super(props);
     this.state = {
       expanded: null,
+      
     };
   }
   handleChange = panel => (event, expanded) => {
@@ -39,6 +41,22 @@ class Chapters extends Component {
   render() {
     const { classes } = this.props;
     const { expanded } = this.state;
+    //const array = [];
+    //cua quang
+    // let section = this.props.SectionData.section.sectionList;
+    // console.log(section);
+    // for(let i = 0 ; i<section.length; i++){
+    //   for(let k = 0; k<section[i].list_video.length; k++){
+    //       console.log(section[i].list_video[k].video_name);
+    //       array.push(section[i].list_video[k].video_name)
+    //   }
+    // }
+     //console.log(array);
+    //cua Hieu
+    let myVideoNameList = this.props.myVideos.videos.map(element =>{
+      return <Video key={element} videoName= {element}/>
+    });
+    // console.log("Hieu dai ca" ,this.props.myVideos);
     return (
       <div className={classes.root}>
         <ExpansionPanel
@@ -51,7 +69,7 @@ class Chapters extends Component {
             </Typography>
             <Typography className={classes.secondaryHeading}> </Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails><MapVideo listVideo /></ExpansionPanelDetails>
+          <ExpansionPanelDetails> <MapVideo videoName={myVideoNameList}/> </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
     );
@@ -61,4 +79,10 @@ Chapters.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default connect()(withStyles(styles)(Chapters));
+const mapStateToProps = state => {
+  return {
+    SectionData: state.section,
+  };
+};
+
+export default connect(mapStateToProps,null)(withStyles(styles)(Chapters));
