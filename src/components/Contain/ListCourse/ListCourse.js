@@ -40,8 +40,8 @@ class ListCourse extends Component {
                     <div
                       className="courseDescription"
                       style={{
-                        '-webkit-line-clamp': '2',
-                        '-webkit-box-orient': 'vertical',
+                        WebkitLineClamp: '2',
+                        WebkitBoxOrient: 'vertical',
                       }}
                     >
                       {course.description}
@@ -63,10 +63,10 @@ class ListCourse extends Component {
                   </CardContent>
                   <CardActions>
                     <IconButton aria-label="Add to favorites">
-                      <FavoriteIcon style={{ 'font-size': '1.8em' }} />
+                      <FavoriteIcon style={{ fontSize: '1.8em' }} />
                     </IconButton>
                     <IconButton aria-label="Share">
-                      <ShareIcon style={{ 'font-size': '1.8em' }} />
+                      <ShareIcon style={{ fontSize: '1.8em' }} />
                     </IconButton>
                     <Button
                       className="btn"
@@ -74,8 +74,8 @@ class ListCourse extends Component {
                       variant="raised"
                       onClick={() => this.onClickShowId(course.id)}
                       style={{
-                        'font-size': '16px',
-                        'text-transform': 'lowercase',
+                        fontSize: '16px',
+                        textTransform: 'lowercase',
                       }}
                     >
                       <Link to={'/listchapter/' + course.courseName}>
