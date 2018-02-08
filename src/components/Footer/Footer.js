@@ -22,7 +22,7 @@ const footer = () => {
         <div>
           <i className="fa fa-map-marker" />
           <p>
-            <span>15 Hung Vuong st</span> Da Nang, Viet Nam
+            <span>255 Hung Vuong st</span> Da Nang, Viet Nam
           </p>
         </div>
         <div>

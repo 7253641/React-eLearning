@@ -5,17 +5,17 @@ import classNames from 'classnames';
 import Drawer from 'material-ui/Drawer';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
-// import List from "material-ui/List";
+import List from 'material-ui/List';
 // import { MenuItem } from "material-ui/Menu";
 import Typography from 'material-ui/Typography';
-// import Divider from "material-ui/Divider";
+import Divider from 'material-ui/Divider';
 import IconButton from 'material-ui/IconButton';
 import MenuIcon from 'material-ui-icons/Menu';
 import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
 import ChevronRightIcon from 'material-ui-icons/ChevronRight';
 import Video from '../index';
 import './MenuVideo.css';
-// import { mailFolderListItems, otherMailFolderListItems } from './tileData';
+import MapChapter from '../../showListChapter/MapChapter';
 
 const drawerWidth = 240;
 
@@ -151,10 +151,11 @@ class PersistentDrawer extends Component {
               )}
             </IconButton>
           </div>
-          {/* <Divider />
-          <List className={classes.list}>{mailFolderListItems}</List>
           <Divider />
-          <List className={classes.list}>{otherMailFolderListItems}</List> */}
+          <List className={classes.list}>
+            <MapChapter />
+          </List>
+          <Divider />
         </div>
       </Drawer>
     );

@@ -6,6 +6,8 @@ import ExpansionPanel, {
   ExpansionPanelSummary,
 } from 'material-ui/ExpansionPanel';
 import Typography from 'material-ui/Typography';
+import MapVideo from './MapVideo';
+import { connect } from 'react-redux';
 
 const styles = theme => ({
   root: {
@@ -45,15 +47,11 @@ class Chapters extends Component {
         >
           <ExpansionPanelSummary>
             <Typography className={classes.heading}>
-              {this.props.email}
+              {this.props.sectionName}
             </Typography>
-            <Typography className={classes.secondaryHeading}>
-              {this.props.name}
-            </Typography>
+            <Typography className={classes.secondaryHeading}> </Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails>
-            <Typography> {this.props.body} </Typography>
-          </ExpansionPanelDetails>
+          <ExpansionPanelDetails><MapVideo listVideo /></ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
     );
@@ -62,4 +60,5 @@ class Chapters extends Component {
 Chapters.propTypes = {
   classes: PropTypes.object.isRequired,
 };
-export default withStyles(styles)(Chapters);
+
+export default connect()(withStyles(styles)(Chapters));

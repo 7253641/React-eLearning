@@ -3,56 +3,85 @@ import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
 import './css/style.css';
 import { connect } from 'react-redux';
-import {
-  fetchDatasWithRedux,
-  postIdWithRedux,
-} from '../../../actions/actionListCourse/actionListCourse.js';
+import * as action from '../../../actions/actionListCourse/actionListCourse.js';
 import IconButton from 'material-ui/IconButton';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
-import Typography from 'material-ui/Typography';
+import { Link } from 'react-router-dom';
 import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
+import ReactStars from 'react-stars';
+
 class ListCourse extends Component {
   componentDidMount() {
-    this.props.fetchDatasWithRedux();
+    this.props.onFetchData();
   }
   render() {
     return (
       <div className="root">
         <Grid container spacing={24}>
-          {this.props.data.map((card, index) => {
+          {this.props.courses.map((course, index) => {
             return (
-              <Grid key={card.id} item xs={12} sm={6} md={3}>
+              <Grid key={course.id} item xs={12} sm={6} md={3}>
                 <Card className="card">
                   <div
                     className="imageShow"
-                    onClick={() => this.onClickShowId(card.id)}
+                    onClick={() => this.onClickShowId(course.id)}
                   >
-                    <img src={'http://10.10.1.65' + card.imageUrl} alt="logo" />
+                    <img
+                      src={'http://10.10.1.65' + course.imageUrl}
+                      alt="logo"
+                    />
                   </div>
                   <CardContent>
-                    <Typography type="headline" component="h1">
-                      {card.courseName}
-                    </Typography>
-                    <Typography className="p">{card.description}...</Typography>
+                    <div className="courseName">
+                      <h1> {course.courseName}</h1>
+                    </div>
+                    <div
+                      className="courseDescription"
+                      style={{
+                        '-webkit-line-clamp': '2',
+                        '-webkit-box-orient': 'vertical',
+                      }}
+                    >
+                      {course.description}
+                    </div>
+                    <Grid container spacing={16}>
+                      <Grid item xs={6}>
+                        <ReactStars
+                          className="staring"
+                          count={5}
+                          onChange={this.ratingChanged}
+                          size={24}
+                          color2={'#ffd700'}
+                        />
+                      </Grid>
+                      <Grid item xs={6}>
+                        <div className="priceCourse"> ${course.price}.00</div>
+                      </Grid>
+                    </Grid>
                   </CardContent>
                   <CardActions>
                     <IconButton aria-label="Add to favorites">
-                      <FavoriteIcon />
+                      <FavoriteIcon style={{ 'font-size': '1.8em' }} />
                     </IconButton>
                     <IconButton aria-label="Share">
-                      <ShareIcon />
+                      <ShareIcon style={{ 'font-size': '1.8em' }} />
                     </IconButton>
                     <Button
+                      className="btn"
                       size="small"
                       variant="raised"
-                      color="secondary"
-                      onClick={() => this.onClickShowId(card.id)}
+                      onClick={() => this.onClickShowId(course.id)}
+                      style={{
+                        'font-size': '16px',
+                        'text-transform': 'lowercase',
+                      }}
                     >
-                      Learn More
+                      <Link to={'/listchapter/' + course.courseName}>
+                        Chapter
+                      </Link>
                     </Button>
-                    <Typography className="price">${card.price}.00</Typography>
                   </CardActions>
                 </Card>
               </Grid>
@@ -62,18 +91,31 @@ class ListCourse extends Component {
       </div>
     );
   }
-  onClickShowId = postId => {
-    this.props.postIdWithRedux(postId);
+  onClickShowId = id => {
+    if (this.props.courses.length > 0) this.props.onPostId(id);
+  };
+  ratingChanged = rating => {
+    console.log(this.props.getRating(rating));
   };
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = state => {
   return {
-    data: state.dataReducer.data,
-    // id: state.dataReducer.id,
+    courses: state.dataReducer.data,
+    rating: state.dataReducer.rating,
   };
-}
-export default connect(mapStateToProps, {
-  fetchDatasWithRedux,
-  postIdWithRedux,
-})(ListCourse);
+};
+const mapDispatchToProps = (dispatch, props) => {
+  return {
+    onFetchData: () => {
+      dispatch(action.fetchDatasWithRedux());
+    },
+    onPostId: id => {
+      dispatch(action.fetchDataSection(id));
+    },
+    getRating: rating => {
+      dispatch(action.getRating(rating));
+    },
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(ListCourse);

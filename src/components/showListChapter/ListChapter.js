@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MapChapter from './mapChapter';
+import MapChapter from './MapChapter';
 class ListChapter extends Component {
   render() {
     return (

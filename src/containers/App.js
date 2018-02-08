@@ -7,7 +7,7 @@ import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 import Wrapper from '../components/Hoc/Hoc';
 import Radium from 'radium';
 import ShowListChapter from '../components/showListChapter/ShowListChapter';
-import ListCourse from '../components/Contain/ListCourse/ListCourse.js';
+import ListCourse from '../components/Contain/ListCourse/ListCourse';
 
 const theme = createMuiTheme();
 class App extends Component {

@@ -9,7 +9,7 @@ import {
   PlaybackRateMenuButton,
   VolumeMenuButton,
 } from 'video-react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import '../../../node_modules/video-react/dist/video-react.css';
 import { videoActions } from '../../actions/videoActions/index';
