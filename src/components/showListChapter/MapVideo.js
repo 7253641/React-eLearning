@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as action from '../../actions/ChapterAction/ChapterAction';
-import Video from './Video';
-import { easing } from 'material-ui/styles/transitions';
+// import Video from './Video';
+// import { easing } from 'material-ui/styles/transitions';
 class MapChapter extends Component {
   componentDidMount() {
     //this.props.onFetchAllSession();
