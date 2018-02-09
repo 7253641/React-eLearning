@@ -54,7 +54,7 @@ class Chapters extends Component {
      //console.log(array);
     //cua Hieu
     let myVideoNameList = this.props.myVideos.videos.map(element => {
-      return <MapVideo key={element} videoName= {element.video_name} videoUrl={element.video_url}/>
+      return <MapVideo key={element.video_name} videoName= {element.video_name} videoUrl={element.video_url}/>
     });
     // console.log("Hieu dai ca" ,this.props.myVideos);
     return (
