@@ -35,7 +35,7 @@ export function fetchDatasWithRedux() {
   return function(dispatch) {
     return axios({
       method: 'get',
-      url: 'http://10.10.1.65:8080/api-1.0/api/courses',
+      url: 'http://10.10.1.65:8080/api-1.1/api/courses',
       response: 'json',
     })
       .then(response => {
@@ -77,7 +77,8 @@ export const fetchDataSection = id => {
         },
       })
       .then(response => {
-        dispatch(getDataSuccessSection(response.data));
+         dispatch(getDataSuccessSection(response.data));
+        //console.log(response.data);
       })
       .catch(response => dispatch(getDataFailure()));
   };

@@ -16,6 +16,10 @@ class ListCourse extends Component {
   componentDidMount() {
     this.props.onFetchData();
   }
+  // transformId = (id) =>{
+  //   console.log("quasdkjasdk",this.props.courses[8].id);
+  //   this.props.onTransformId(this.props.courses[8].id);
+  // }
   render() {
     return (
       <div className="root">
@@ -113,6 +117,9 @@ const mapDispatchToProps = (dispatch, props) => {
     onPostId: id => {
       dispatch(action.fetchDataSection(id));
     },
+    // onTransformId: id => {
+    //   dispatch(action.fetchDataSection(id));
+    // },
     getRating: rating => {
       dispatch(action.getRating(rating));
     },
