@@ -39,7 +39,7 @@ class ListCourse extends Component {
                   </div>
                   <CardContent>
                     <div className="courseName">
-                      <h1> {course.courseName}</h1>
+                      <h3> {course.courseName}</h3>
                     </div>
                     <div
                       className="courseDescription"
@@ -78,12 +78,13 @@ class ListCourse extends Component {
                       variant="raised"
                       onClick={() => this.onClickShowId(course.id)}
                       style={{
+                        color: '#fff',
                         fontSize: '16px',
                         textTransform: 'lowercase',
                       }}
                     >
                       <Link to={'/listchapter/' + course.courseName}>
-                        Chapter
+                        Click more
                       </Link>
                     </Button>
                   </CardActions>
