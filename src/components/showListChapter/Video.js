@@ -22,7 +22,7 @@ class Video extends Component {
 
   onClickShowVideo = url => {
     this.props.videoFetchFulfilled(url);
-    console.log("abcd123", url);
+    // console.log("abcd123", url);
   };
 
   handleChange = panel => (event, expanded) => {
