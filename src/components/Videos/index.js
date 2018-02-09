@@ -16,13 +16,23 @@ import { videoActions } from '../../actions/videoActions/index';
 import { connect } from 'react-redux';
 class Video extends Component {
   componentDidMount() {
-    this.props.fetchVideo();
+    // this.props.fetchVideo();
   }
   render() {
+    //console.log(this.props.URL.section.sectionList);
+    //console.log(this.props.URL.section.sectionList.length);
+    // let arrayURL = [];
+    // for(let i = 0; i<this.props.URL.section.sectionList.length; i++)
+    // {
+    //   //console.log(this.props.URL.section.sectionList[i].list_video);
+    //   for(let k = 0; k<this.props.URL.section.sectionList[i].list_video.length; k++)
+    //     arrayURL.push(this.props.URL.section.sectionList[i].list_video[k].video_url);
+    // }
+    // console.log("asjdgasjdgajdsgjadsasd", arrayURL);
     return (
       <div className="container-fluid">
         <Player autoPlay={false}>
-          <source src="http://10.10.1.65/videos/007_Quick_Introduction_To%20Spring_Framework.mp4" />
+          <source src={this.props.videoURL} />
           <ControlBar>
             <ReplayControl seconds={10} order={1.1} />
             <ForwardControl seconds={30} order={1.2} />

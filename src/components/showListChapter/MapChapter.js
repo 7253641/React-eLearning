@@ -24,7 +24,7 @@ class MapChapter extends Component {
       myData.forEach((item, index) => {
         myMap.set(item.section_id, item.list_video);
         item.list_video.forEach((item, index) => {
-          myVideos.push(item.video_name);
+          myVideos.push({ video_name: item.video_name, video_url: 'http://10.10.1.65' + item.video_url });
         });
         mySections.push({section_id: item.section_id, section_name: item.section_name, videos: myVideos});
         myVideos = [];

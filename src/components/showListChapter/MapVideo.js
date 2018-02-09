@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as action from '../../actions/ChapterAction/ChapterAction';
 import Video from './Video';
+// import { Link } from 'react-router-dom';
 //import Chapters from './Chapters';
 class MapChapter extends Component {
   componentDidMount() {
@@ -51,7 +52,7 @@ class MapChapter extends Component {
   //     return <Video key={element} videoName={element}/>
   //   })
   //Cua Hieu
-    return <div><Video videoName ={this.props.videoName}/></div>;
+    return <div><Video videoUrl={this.props.videoUrl} videoName ={this.props.videoName}/></div>;
   }
 }
 const mapStateToProps = state => {

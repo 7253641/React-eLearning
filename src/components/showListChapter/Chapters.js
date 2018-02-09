@@ -8,8 +8,8 @@ import ExpansionPanel, {
 import Typography from 'material-ui/Typography';
 import MapVideo from './MapVideo';
 import { connect } from 'react-redux';
-import Video from './Video';
-
+// import Video from './Video';
+import List from 'material-ui/List';
 const styles = theme => ({
   root: {
     width: '100%',
@@ -53,8 +53,8 @@ class Chapters extends Component {
     // }
      //console.log(array);
     //cua Hieu
-    let myVideoNameList = this.props.myVideos.videos.map(element =>{
-      return <Video key={element} videoName= {element}/>
+    let myVideoNameList = this.props.myVideos.videos.map(element => {
+      return <MapVideo key={element} videoName= {element.video_name} videoUrl={element.video_url}/>
     });
     // console.log("Hieu dai ca" ,this.props.myVideos);
     return (
@@ -69,7 +69,9 @@ class Chapters extends Component {
             </Typography>
             <Typography className={classes.secondaryHeading}> </Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails> <MapVideo videoName={myVideoNameList}/> </ExpansionPanelDetails>
+          <ExpansionPanelDetails> 
+          <List component="nav">{myVideoNameList}</List>
+          </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
     );

@@ -111,41 +111,35 @@ class PersistentDrawer extends Component {
   state = {
     open: false,
     anchor: 'left',
-    listVideo: [
-      {
-        id: '01',
-        name: 'Part1',
-        url: '/videos/001_Spring_Framework_Master_Class-Preview.mp4',
-      },
-      {
-        id: '02',
-        name: 'Part2',
-        url: '/videos/003_One_Thing_You_Should_Do.mp4',
-      },
-      {
-        id: '03',
-        name: 'Part3',
-        url: '/videos/007_Quick_Introduction_To Spring_Framework.mp4',
-      },
-      {
-        id: '04',
-        name: 'Part4',
-        url: '/videos/005_Spring_Framework_Master Class-Git_Repository.mp4',
-      },
-      {
-        id: '05',
-        name: 'Part5',
-        url:
-          '/videos/006 Spring_Framework_Master_Class-Installing_Basic_Tools.mp4',
-      },
-    ],
+    // listVideo: [
+    //   {
+    //     id: '01',
+    //     name: 'Part1',
+    //     url: '/videos/001_Spring_Framework_Master_Class-Preview.mp4',
+    //   },
+    //   {
+    //     id: '02',
+    //     name: 'Part2',
+    //     url: '/videos/003_One_Thing_You_Should_Do.mp4',
+    //   },
+    //   {
+    //     id: '03',
+    //     name: 'Part3',
+    //     url: '/videos/007_Quick_Introduction_To Spring_Framework.mp4',
+    //   },
+    //   {
+    //     id: '04',
+    //     name: 'Part4',
+    //     url: '/videos/005_Spring_Framework_Master Class-Git_Repository.mp4',
+    //   },
+    //   {
+    //     id: '05',
+    //     name: 'Part5',
+    //     url:
+    //       '/videos/006 Spring_Framework_Master_Class-Installing_Basic_Tools.mp4',
+    //   },
+    // ],
   };
-
-  linkToVideo = event => {
-    return (
-      <Video />
-    )
-  }
   handleDrawerOpen = () => {
     this.setState({ open: true });
   };
@@ -163,17 +157,17 @@ class PersistentDrawer extends Component {
   render() {
     const { classes, theme } = this.props;
     const { anchor, open } = this.state;
-    const arrayVideo = this.state.listVideo.map((newListVideo, index) => {
-      return (
-        <ListVideo
-          className={classes.list}
-          nameVideo={newListVideo.name}
-          key={index}
-          url={newListVideo.url}
-          linkVideo={() => this.linkToVideo()}
-        />
-      );
-    });
+    // const arrayVideo = this.state.listVideo.map((newListVideo, index) => {
+    //   return (
+    //     <ListVideo
+    //       className={classes.list}
+    //       nameVideo={newListVideo.name}
+    //       key={index}
+    //       url={newListVideo.url}
+    //       linkVideo={() => this.linkToVideo()}
+    //     />
+    //   );
+    // });
     const drawer = (
       <Drawer
         variant="persistent"
@@ -194,7 +188,8 @@ class PersistentDrawer extends Component {
             </IconButton>
           </div>
           <Divider />
-          {arrayVideo}
+          {/* {arrayVideo} */}
+          <ListVideo />
           <Divider />
         </div>
       </Drawer>
