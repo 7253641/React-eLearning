@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import * as action from '../../actions/ChapterAction/ChapterAction';
 import Chapters from './Chapters';
 //import MapVideo from './MapVideo';
+// import { Link } from 'react-router-dom';
 class MapChapter extends Component {
   componentDidMount() {
   //  this.props.onFetchAllSession(this.props.SectionData.section.section_id);
@@ -23,7 +24,7 @@ class MapChapter extends Component {
       myData.forEach((item, index) => {
         myMap.set(item.section_id, item.list_video);
         item.list_video.forEach((item, index) => {
-          myVideos.push(item.video_name);
+          myVideos.push({ video_name: item.video_name, video_url: 'http://10.10.1.65' + item.video_url });
         });
         mySections.push({section_id: item.section_id, section_name: item.section_name, videos: myVideos});
         myVideos = [];
@@ -31,14 +32,14 @@ class MapChapter extends Component {
     }
     return (
       <div>
-        {mySections.map(element =>{
-          return <Chapters 
-                    key ={element.section_id} 
-                    sectionId= {element.section_id} 
-                    myVideos = {element} 
-                    sectionName={element.section_name}
-                  />
-        })}
+          {mySections.map(element =>{
+            return <Chapters 
+                      key ={element.section_id} 
+                      sectionId= {element.section_id} 
+                      myVideos = {element} 
+                      sectionName={element.section_name}
+                    />
+          })}
       </div>
     )
   }
