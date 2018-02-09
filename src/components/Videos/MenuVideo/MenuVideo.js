@@ -15,6 +15,7 @@ import ChevronLeftIcon from 'material-ui-icons/ChevronLeft';
 import ChevronRightIcon from 'material-ui-icons/ChevronRight';
 import Video from '../index';
 import './MenuVideo.css';
+import ShowListChapter from '../../showListChapter/ShowListChapter';
 // import { mailFolderListItems, otherMailFolderListItems } from './tileData';
 
 const drawerWidth = 240;
@@ -151,10 +152,7 @@ class PersistentDrawer extends Component {
               )}
             </IconButton>
           </div>
-          {/* <Divider />
-          <List className={classes.list}>{mailFolderListItems}</List>
-          <Divider />
-          <List className={classes.list}>{otherMailFolderListItems}</List> */}
+          <ShowListChapter />
         </div>
       </Drawer>
     );

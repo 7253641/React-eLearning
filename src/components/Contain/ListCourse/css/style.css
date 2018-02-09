@@ -35,9 +35,12 @@ Link {
     color: #fff !important;
     background-color: #008080 !important; }
 
-@media only screen and (min-width: 412px) and (max-width: 736px) {
+@media only screen and (min-width: 414px) and (max-width: 736px) {
   .MuiGrid-spacing-xs-24-26 > .MuiGrid-typeItem-4 {
     padding: 12px 34px 12px 34px !important; } }
+@media only screen and (min-width: 320px) and (max-height: 480px) {
+  #root {
+    width: 113%; } }
 .MuiGrid-spacing-xs-24-26 {
   width: 100% !important;
   margin: 0 !important; }
@@ -46,5 +49,8 @@ Link {
   width: 100%;
   height: 186px;
   cursor: pointer; }
+
+.card {
+  width: 100%; }
 
 /*# sourceMappingURL=style.css.map */

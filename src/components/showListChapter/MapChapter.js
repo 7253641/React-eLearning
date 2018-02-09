@@ -12,7 +12,12 @@ class MapChapter extends Component {
     console.log(this.props.SectionData.section);
     if (this.props.SectionData.section.length !== 0) {
       sectionName = this.props.SectionData.section.sectionList.map(section => {
-        return <Chapters key={section.section_id} sectionName={section.section_name} />;
+        return (
+          <Chapters
+            key={section.section_id}
+            sectionName={section.section_name}
+          />
+        );
       });
     }
     return <div>{sectionName}</div>;

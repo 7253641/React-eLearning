@@ -10,7 +10,11 @@ class ShowListChapter extends Component {
       <div className={classes.root}>
         <AppBar position="static" color="default">
           <Toolbar>
-            <Typography type="title" color="inherit">
+            <Typography
+              type="title"
+              color="inherit"
+              style={{ fontSize: '18px' }}
+            >
               Category
             </Typography>
           </Toolbar>
