@@ -1,26 +1,26 @@
-import * as types from '../constants/index';
+import * as types from '../constants/sectionConstants';
 
 const initialState = {
-  chapters: [],
+  section: [],
   dataFetched: false,
   isFetching: false,
   error: false,
 };
 const myReducer = (state = initialState, action) => {
   switch (action.type) {
-    case types.FETCHING_DATA:
+    case types.FETCHING_DATA_SECTION:
       return {
         ...state,
-        chapters: [],
+        section: [],
         isFetching: true,
       };
-    case types.FETCHING_DATA_SUCCESS:
+    case types.FETCHING_DATA_SUCCESS_SECTION:
       return {
         ...state,
         isFetching: false,
-        chapters: action.chapters,
+        section: action.section,
       };
-    case types.FETCHING_DATA_FAILURE:
+    case types.FETCHING_DATA_FAILURE_SECTION:
       return {
         ...state,
         isFetching: false,

@@ -9,18 +9,29 @@ import {
   PlaybackRateMenuButton,
   VolumeMenuButton,
 } from 'video-react';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './index.css';
 import '../../../node_modules/video-react/dist/video-react.css';
 import { videoActions } from '../../actions/videoActions/index';
 import { connect } from 'react-redux';
-
 class Video extends Component {
   componentDidMount() {
-    this.props.fetchVideo();
+    // this.props.fetchVideo();
   }
   render() {
+    //console.log(this.props.URL.section.sectionList);
+    //console.log(this.props.URL.section.sectionList.length);
+    // let arrayURL = [];
+    // for(let i = 0; i<this.props.URL.section.sectionList.length; i++)
+    // {
+    //   //console.log(this.props.URL.section.sectionList[i].list_video);
+    //   for(let k = 0; k<this.props.URL.section.sectionList[i].list_video.length; k++)
+    //     arrayURL.push(this.props.URL.section.sectionList[i].list_video[k].video_url);
+    // }
+    // console.log("asjdgasjdgajdsgjadsasd", arrayURL);
     return (
-      <div>
-        <Player autoPlay>
+      <div className="container-fluid">
+        <Player autoPlay={false}>
           <source src={this.props.videoURL} />
           <ControlBar>
             <ReplayControl seconds={10} order={1.1} />
@@ -31,6 +42,12 @@ class Video extends Component {
             <VolumeMenuButton />
           </ControlBar>
         </Player>
+        {/* <div className="video-thumbnail">
+          <video
+            controls
+            src="http://10.10.1.65/videos/007_Quick_Introduction_To%20Spring_Framework.mp4"
+          />
+        </div> */}
       </div>
     );
   }

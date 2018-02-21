@@ -1,13 +1,14 @@
-import React, { Component } from "react";
-import Video from "../components/Videos/index";
-import Classes from "./App.css";
-import BrowserRouter from "react-router-dom/BrowserRouter";
-import { Route } from "react-router-dom";
-import { MuiThemeProvider, createMuiTheme } from "material-ui/styles";
-import Wrapper from "../components/Hoc/Hoc";
-import Radium from "radium";
-import Index from "../components/showListChapter/Index";
-import ListCourse from "../components/Contain/ListCourse/ListCourse.js";
+import React, { Component } from 'react';
+import MenuVideo from '../components/Videos/MenuVideo/MenuVideo';
+import Classes from './App.css';
+import BrowserRouter from 'react-router-dom/BrowserRouter';
+import { Route } from 'react-router-dom';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
+import Wrapper from '../components/Hoc/Hoc';
+import Radium from 'radium';
+import ShowListChapter from '../components/showListChapter/ShowListChapter';
+import ListCourse from '../components/Contain/ListCourse/ListCourse';
+
 const theme = createMuiTheme();
 class App extends Component {
   render() {
@@ -17,8 +18,8 @@ class App extends Component {
           <div className={Classes}>
             <Wrapper>
               <Route path="/" exact component={ListCourse} />
-              <Route path="/index" component={Index} />
-              <Route path="/video" component={Video} />
+              <Route path="/listchapter" component={ShowListChapter} />
+              <Route path="/video" component={MenuVideo} />
             </Wrapper>
           </div>
         </BrowserRouter>
