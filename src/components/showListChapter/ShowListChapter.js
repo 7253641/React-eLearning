@@ -3,7 +3,7 @@ import AppBar from 'material-ui/AppBar';
 import Typography from 'material-ui/Typography';
 import classes from './Index.css';
 import Toolbar from 'material-ui/Toolbar';
-import ListChapter from './ListChapter';
+import MapChapter from './MapChapter';
 class ShowListChapter extends Component {
   render() {
     return (
@@ -19,7 +19,7 @@ class ShowListChapter extends Component {
             </Typography>
           </Toolbar>
         </AppBar>
-        <ListChapter />
+        <MapChapter id={this.props.match.params.id} />
       </div>
     );
   }
