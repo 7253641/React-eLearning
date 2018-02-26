@@ -2,11 +2,16 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actionSection from './../../../actions/ChapterAction/ChapterAction';
 import Section from './Section';
+import DetailCourse from './../DetailCourse/DetailCourse';
+import AppBar from 'material-ui/AppBar';
+import Typography from 'material-ui/Typography';
+import Toolbar from 'material-ui/Toolbar';
 class ListSection extends Component {
   componentDidMount() {
     this.props.onFetchAllSession(this.props.id);
   }
   render() {
+    let myCourse = this.props.SectionData.section;
     let myData = this.props.SectionData.section.sectionList;
     if (myData === undefined){
       return <div />
@@ -22,6 +27,22 @@ class ListSection extends Component {
       })
       return(
         <div>
+          <DetailCourse
+          title={myCourse.course_name}
+          img={myCourse.image_url}
+          des={myCourse.description}
+          />
+          <AppBar position="static" color="default">
+            <Toolbar>
+              <Typography
+                type="title"
+                color="inherit"
+                style={{ fontSize: '18px' }}
+              >
+                Category
+              </Typography>
+            </Toolbar>
+          </AppBar>
           {mySections}
         </div>
       )
