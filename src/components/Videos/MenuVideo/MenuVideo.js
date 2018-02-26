@@ -153,7 +153,6 @@ class PersistentDrawer extends Component {
       anchor: event.target.value,
     });
   };
-
   render() {
     const { classes, theme } = this.props;
     const { anchor, open } = this.state;
@@ -189,7 +188,7 @@ class PersistentDrawer extends Component {
           </div>
           <Divider />
           {/* {arrayVideo} */}
-          <ListVideo />
+          <ListVideo id={this.props.match.params.id} />
           <Divider />
         </div>
       </Drawer>
