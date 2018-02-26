@@ -41,22 +41,9 @@ class Chapters extends Component {
   render() {
     const { classes } = this.props;
     const { expanded } = this.state;
-    //const array = [];
-    //cua quang
-    // let section = this.props.SectionData.section.sectionList;
-    // console.log(section);
-    // for(let i = 0 ; i<section.length; i++){
-    //   for(let k = 0; k<section[i].list_video.length; k++){
-    //       console.log(section[i].list_video[k].video_name);
-    //       array.push(section[i].list_video[k].video_name)
-    //   }
-    // }
-     //console.log(array);
-    //cua Hieu
-    let myVideoNameList = this.props.myVideos.videos.map(element => {
-      return <MapVideo key={element.video_name} videoName= {element.video_name} videoUrl={element.video_url}/>
+    let myVideoNameList = this.props.sectionVideo.map(element => {
+      return <MapVideo key={element.video_name} videoName= {element.video_name} videoUrl={element.video_url} id={this.props.id}/>
     });
-    // console.log("Hieu dai ca" ,this.props.myVideos);
     return (
       <div className={classes.root}>
         <ExpansionPanel

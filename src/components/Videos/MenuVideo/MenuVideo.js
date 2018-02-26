@@ -203,7 +203,6 @@ class PersistentDrawer extends Component {
     } else {
       after = drawer;
     }
-
     return (
       <div className={classes.root}>
         <div className={classes.appFrame}>
@@ -238,7 +237,7 @@ class PersistentDrawer extends Component {
               },
             )}
           >
-            <Video />
+            <Video url={this.props.match.params.name}/>
           </main>
           {after}
         </div>

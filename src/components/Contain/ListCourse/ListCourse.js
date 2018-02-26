@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
 import './css/style.css';
 import { connect } from 'react-redux';
-import * as action from '../../../actions/actionListCourse/actionListCourse.js';
+import * as actionListCourse from '../../../actions/actionListCourse/actionListCourse.js';
 import IconButton from 'material-ui/IconButton';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
 import ReactStars from 'react-stars';
-
+import * as actionListSection from '../../../actions/ChapterAction/ChapterAction';
 class ListCourse extends Component {
   componentDidMount() {
     this.props.onFetchData();
@@ -83,7 +83,7 @@ class ListCourse extends Component {
                         textTransform: 'lowercase',
                       }}
                     >
-                      <Link to={'/listchapter/' + course.courseName}>
+                      <Link to={'/listchapter/' + course.id}>
                         Click more
                       </Link>
                     </Button>
@@ -113,16 +113,16 @@ const mapStateToProps = state => {
 const mapDispatchToProps = (dispatch, props) => {
   return {
     onFetchData: () => {
-      dispatch(action.fetchDatasWithRedux());
+      dispatch(actionListCourse.fetchDatasWithRedux());
     },
     onPostId: id => {
-      dispatch(action.fetchDataSection(id));
+      dispatch(actionListSection.fetchDataSection(id));
     },
     // onTransformId: id => {
     //   dispatch(action.fetchDataSection(id));
     // },
     getRating: rating => {
-      dispatch(action.getRating(rating));
+      dispatch(actionListCourse.getRating(rating));
     },
   };
 };

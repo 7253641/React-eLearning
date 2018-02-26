@@ -18,8 +18,8 @@ class App extends Component {
           <div className={Classes}>
             <Wrapper>
               <Route path="/" exact component={ListCourse} />
-              <Route path="/listchapter" component={ShowListChapter} />
-              <Route path="/video" component={MenuVideo} />
+              <Route path="/listchapter/:id" component={ShowListChapter} />
+              <Route path="/:id/:url/:name" component={MenuVideo} />
             </Wrapper>
           </div>
         </BrowserRouter>

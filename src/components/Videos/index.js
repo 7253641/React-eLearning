@@ -32,7 +32,7 @@ class Video extends Component {
     return (
       <div className="container-fluid">
         <Player autoPlay={false}>
-          <source src={this.props.videoURL} />
+          <source src={"http://10.10.1.65/videos/" +this.props.url} />
           <ControlBar>
             <ReplayControl seconds={10} order={1.1} />
             <ForwardControl seconds={30} order={1.2} />
