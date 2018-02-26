@@ -9,16 +9,16 @@ class DetailCourse extends Component {
       return (
         <div className="root">
           <Grid container spacing={16}>
-            <Grid item xs={12}>
-              <h3>{this.props.title}</h3>
-            </Grid>
-            <Grid item xs={6}>
-              <div className="imageCourse">
-                <img src={'http://10.10.1.65' + this.props.img} alt="logo" />
+            <Grid item xs={12} sm={12} md={6}>
+              <div>
+                <div className="imageCourse">
+                  <img src={'http://10.10.1.65' + this.props.img} alt="logo" />
+                </div>
               </div>
             </Grid>
-            <Grid item xs={6}>
-              {this.props.des}
+            <Grid item xs={12} sm={12} md={6}>
+              <h3>{this.props.title}</h3>
+              <p>{this.props.des}</p>
             </Grid>
           </Grid>
         </div>
