@@ -1,22 +1,22 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actionSection from '../../actions/ChapterAction/ChapterAction';
-import Chapters from './Chapters';
-class MapChapter extends Component {
+import * as actionSection from './../../../actions/ChapterAction/ChapterAction';
+import Section from './Section';
+class ListSection extends Component {
   componentDidMount() {
     this.props.onFetchAllSession(this.props.id);
   }
   render() {
     let myData = this.props.SectionData.section.sectionList;
-    if (myData == undefined){
+    if (myData === undefined){
       return <div />
     }
     else {
       let mySections = null;
-      mySections = myData.map(chapter => {
+      mySections = myData.map(section => {
         return(
-          <div key={chapter.section_id}>
-           <Chapters sectionName = {chapter.section_name} sectionVideo = {chapter.list_video} id = {this.props.id}/>
+          <div key={section.section_id}>
+           <Section sectionName = {section.section_name} sectionVideo = {section.list_video} id = {this.props.id}/>
           </div>
         )
       })
@@ -41,4 +41,4 @@ const mapDispatchToProps = (dispatch, props) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(MapChapter);
+export default connect(mapStateToProps, mapDispatchToProps)(ListSection);

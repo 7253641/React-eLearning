@@ -38,7 +38,6 @@ export function fetchDatasWithRedux() {
       response: 'json',
     })
       .then(response => {
-        console.log(response.data);
         let getThreeItems = response.data;
         dispatch(getDataSuccess(getThreeItems));
       })
