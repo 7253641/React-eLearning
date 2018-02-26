@@ -15,23 +15,17 @@ import '../../../node_modules/video-react/dist/video-react.css';
 import { videoActions } from '../../actions/videoActions/index';
 import { connect } from 'react-redux';
 class Video extends Component {
-  componentDidMount() {
-    // this.props.fetchVideo();
+  shouldComponentUpdate(nextProps) {
+    if (this.props.src !== this.props.url) {
+      this.refs.player.load();
+      return true;
+    }
+    return false;
   }
   render() {
-    //console.log(this.props.URL.section.sectionList);
-    //console.log(this.props.URL.section.sectionList.length);
-    // let arrayURL = [];
-    // for(let i = 0; i<this.props.URL.section.sectionList.length; i++)
-    // {
-    //   //console.log(this.props.URL.section.sectionList[i].list_video);
-    //   for(let k = 0; k<this.props.URL.section.sectionList[i].list_video.length; k++)
-    //     arrayURL.push(this.props.URL.section.sectionList[i].list_video[k].video_url);
-    // }
-    // console.log("asjdgasjdgajdsgjadsasd", arrayURL);
     return (
       <div className="container-fluid">
-        <Player autoPlay={false}>
+        <Player autoPlay={false} ref="player">
           <source src={"http://10.10.1.65/videos/" +this.props.url} />
           <ControlBar>
             <ReplayControl seconds={10} order={1.1} />

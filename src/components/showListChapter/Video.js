@@ -33,11 +33,11 @@ class Video extends Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <Link to={'/video' + this.props.videoUrl}>
+        <Link to={'/courses/' + this.props.id + '' + this.props.videoUrl}>
           <ListItem button onClick={() => this.onClickShowVideo("http://10.10.1.65"+this.props.videoUrl)}>
             <ListItemText primary={this.props.videoName} />
           </ListItem>
-       </Link>
+        </Link>
       </div>
     );
   }

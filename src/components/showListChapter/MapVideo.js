@@ -7,7 +7,15 @@ import Video from './Video';
 class MapVideo extends Component {
   componentDidMount() {}
   render() {
-    return <div><Video videoUrl={this.props.videoUrl} videoName ={this.props.videoName}/></div>;
+    return (
+      <div>
+        <Video
+          videoUrl={this.props.videoUrl}
+          videoName={this.props.videoName}
+          id={this.props.id}
+        />
+      </div>
+    );
   }
 }
 const mapStateToProps = state => {
