@@ -8,23 +8,22 @@ class MapChapter extends Component {
   }
   render() {
     let myData = this.props.SectionData.section.sectionList;
-    if (myData == undefined){
-      return <div />
-    }
-    else {
+    if (myData === undefined) {
+      return <div />;
+    } else {
       let mySections = null;
       mySections = myData.map(chapter => {
-        return(
+        return (
           <div key={chapter.section_id}>
-           <Chapters sectionName = {chapter.section_name} sectionVideo = {chapter.list_video} id = {this.props.id}/>
+            <Chapters
+              sectionName={chapter.section_name}
+              sectionVideo={chapter.list_video}
+              id={this.props.id}
+            />
           </div>
-        )
-      })
-      return(
-        <div>
-          {mySections}
-        </div>
-      )
+        );
+      });
+      return <div> {mySections} </div>;
     }
   }
 }

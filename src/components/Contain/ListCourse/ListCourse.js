@@ -83,9 +83,7 @@ class ListCourse extends Component {
                         textTransform: 'lowercase',
                       }}
                     >
-                      <Link to={'/listchapter/' + course.id}>
-                        Click more
-                      </Link>
+                      <Link to={'/listchapter/' + course.id}> Click more </Link>
                     </Button>
                   </CardActions>
                 </Card>
