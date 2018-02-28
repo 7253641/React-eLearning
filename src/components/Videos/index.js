@@ -10,7 +10,7 @@ import {
   VolumeMenuButton,
 } from 'video-react';
 import './index.css';
-import '../../../../node_modules/video-react/dist/video-react.css';
+import '../../../node_modules/video-react/dist/video-react.css';
 class Video extends Component {
   shouldComponentUpdate(nextProps) {
     if (this.props.src !== this.props.url) {
@@ -23,7 +23,7 @@ class Video extends Component {
     return (
       <div className="container-fluid">
         <Player autoPlay={false} ref="player">
-          <source src={"http://10.10.1.65/videos/" +this.props.url} />
+          <source src={'http://10.10.1.65/videos/' + this.props.url} />
           <ControlBar>
             <ReplayControl seconds={10} order={1.1} />
             <ForwardControl seconds={30} order={1.2} />

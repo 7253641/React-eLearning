@@ -44,4 +44,3 @@ export function fetchDatasWithRedux() {
       .catch(response => dispatch(getDataFailure()));
   };
 }
-

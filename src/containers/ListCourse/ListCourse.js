@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
 import './css/style.css';
 import { connect } from 'react-redux';
-import * as actionListCourse from '../../../actions/actionListCourse/actionListCourse.js';
+import * as actionListCourse from '../../actions/actionListCourse/actionListCourse.js';
 import IconButton from 'material-ui/IconButton';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
@@ -22,9 +22,7 @@ class ListCourse extends Component {
             return (
               <Grid key={course.id} item xs={12} sm={6} md={3}>
                 <Card className="card">
-                  <div
-                    className="imageShow"
-                  >
+                  <div className="imageShow">
                     <img
                       src={'http://10.10.1.65' + course.imageUrl}
                       alt="logo"
@@ -75,9 +73,7 @@ class ListCourse extends Component {
                         textTransform: 'lowercase',
                       }}
                     >
-                      <Link to={'/courses/' + course.id}>
-                        Click more
-                      </Link>
+                      <Link to={'/courses/' + course.id}> Click more </Link>
                     </Button>
                   </CardActions>
                 </Card>

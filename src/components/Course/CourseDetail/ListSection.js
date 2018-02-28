@@ -2,36 +2,35 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actionSection from './../../../actions/ChapterAction/ChapterAction';
 import Section from './Section';
-import DetailCourse from './../DetailCourse/DetailCourse';
 import AppBar from 'material-ui/AppBar';
 import Typography from 'material-ui/Typography';
 import Toolbar from 'material-ui/Toolbar';
+
 class ListSection extends Component {
   componentDidMount() {
-    this.props.onFetchAllSession(this.props.id);
+    this.props.onFetchAllSession(
+      this.props.id ? this.props.id : this.props.match.params.id,
+    );
   }
   render() {
-    let myCourse = this.props.SectionData.section;
     let myData = this.props.SectionData.section.sectionList;
-    if (myData === undefined){
-      return <div />
-    }
-    else {
+    if (myData === undefined) {
+      return <div />;
+    } else {
       let mySections = null;
       mySections = myData.map(section => {
-        return(
+        return (
           <div key={section.section_id}>
-           <Section sectionName = {section.section_name} sectionVideo = {section.list_video} id = {this.props.id}/>
+            <Section
+              sectionName={section.section_name}
+              sectionVideo={section.list_video}
+              id={this.props.id ? this.props.id : this.props.match.params.id}
+            />
           </div>
-        )
-      })
-      return(
+        );
+      });
+      return (
         <div>
-          <DetailCourse
-          title={myCourse.course_name}
-          img={myCourse.image_url}
-          des={myCourse.description}
-          />
           <AppBar position="static" color="default">
             <Toolbar>
               <Typography
@@ -45,7 +44,7 @@ class ListSection extends Component {
           </AppBar>
           {mySections}
         </div>
-      )
+      );
     }
   }
 }

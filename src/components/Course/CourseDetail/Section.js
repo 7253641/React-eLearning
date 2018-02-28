@@ -29,7 +29,6 @@ class Section extends Component {
     super(props);
     this.state = {
       expanded: null,
-      
     };
   }
   handleChange = panel => (event, expanded) => {
@@ -41,7 +40,14 @@ class Section extends Component {
     const { classes } = this.props;
     const { expanded } = this.state;
     let myVideoNameList = this.props.sectionVideo.map(element => {
-      return <ListVideoName key={element.video_name} videoName= {element.video_name} videoUrl={element.video_url} id={this.props.id}/>
+      return (
+        <ListVideoName
+          key={element.video_name}
+          videoName={element.video_name}
+          videoUrl={element.video_url}
+          id={this.props.id}
+        />
+      );
     });
     return (
       <div className={classes.root}>
@@ -55,8 +61,8 @@ class Section extends Component {
             </Typography>
             <Typography className={classes.secondaryHeading}> </Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails> 
-          <List component="nav">{myVideoNameList}</List>
+          <ExpansionPanelDetails>
+            <List component="nav">{myVideoNameList}</List>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
@@ -73,4 +79,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps,null)(withStyles(styles)(Section));
+export default connect(mapStateToProps, null)(withStyles(styles)(Section));

@@ -194,7 +194,7 @@ class PersistentDrawer extends Component {
               },
             )}
           >
-            <Video url={this.props.match.params.name}/>
+            <Video url={this.props.match.params.name} />
           </main>
           {after}
         </div>
