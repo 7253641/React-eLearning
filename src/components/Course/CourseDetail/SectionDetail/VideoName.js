@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from 'material-ui/styles';
-// import Typography from 'material-ui/Typography';
 import { ListItem, ListItemText } from 'material-ui/List';
-import videoActionCreators from '../../actions/videoActions/actionCreators';
-import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 const styles = theme => ({
   root: {
@@ -12,17 +9,13 @@ const styles = theme => ({
   },
 });
 
-class Video extends Component {
+class VideoName extends Component {
   constructor(props) {
     super(props);
     this.state = {
       expanded: null,
     };
   }
-  onClickShowVideo = url => {
-    this.props.videoFetchFulfilled(url);
-  };
-
   handleChange = panel => (event, expanded) => {
     this.setState({
       expanded: expanded ? panel : false,
@@ -33,7 +26,7 @@ class Video extends Component {
     return (
       <div className={classes.root}>
         <Link to={'/courses/' + this.props.id + '' + this.props.videoUrl}>
-          <ListItem button onClick={() => this.onClickShowVideo("http://10.10.1.65"+this.props.videoUrl)}>
+          <ListItem>
             <ListItemText primary={this.props.videoName} />
           </ListItem>
         </Link>
@@ -41,14 +34,7 @@ class Video extends Component {
     );
   }
 }
-Video.propTypes = {
+VideoName.propTypes = {
   classes: PropTypes.object.isRequired,
 };
-const mapDispatchToProps = dispatch => {
-  return {
-    videoFetchFulfilled: URL => {
-      dispatch(videoActionCreators.videoFetchFulfilled(URL));
-    },
-  };
-};
-export default connect(null, mapDispatchToProps)(withStyles(styles)(Video));
+export default withStyles(styles)(VideoName);

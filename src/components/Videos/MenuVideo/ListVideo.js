@@ -1,10 +1,10 @@
 import React from 'react';
 import List from 'material-ui/List';
-import MapChapter from '../../showListChapter/MapChapter';
+import ListSection from './../../Course/CourseDetail/ListSection';
 const listVideo = props => {
   return (
     <List>
-      <MapChapter id={props.id} />
+      <ListSection id={props.id} />
     </List>
   );
 };

@@ -39,7 +39,8 @@ const footer = () => {
       <div className="footer-right">
         <p className="footer-company-about">
           <span>About the company</span>
-          Lorem ipsum dolor sit amet, consectateur adispicing elit.Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+          Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce
+          euismod convallis velit, eu auctor lacus vehicula sit amet.
         </p>
         <div className="footer-icons">
           <a href="https://fecebook.com">

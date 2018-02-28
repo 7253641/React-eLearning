@@ -6,9 +6,8 @@ import ExpansionPanel, {
   ExpansionPanelSummary,
 } from 'material-ui/ExpansionPanel';
 import Typography from 'material-ui/Typography';
-import MapVideo from './MapVideo';
+import ListVideoName from './SectionDetail/ListVideoName';
 import { connect } from 'react-redux';
-// import Video from './Video';
 import List from 'material-ui/List';
 const styles = theme => ({
   root: {
@@ -25,12 +24,11 @@ const styles = theme => ({
   },
 });
 
-class Chapters extends Component {
+class Section extends Component {
   constructor(props) {
     super(props);
     this.state = {
       expanded: null,
-      
     };
   }
   handleChange = panel => (event, expanded) => {
@@ -42,7 +40,14 @@ class Chapters extends Component {
     const { classes } = this.props;
     const { expanded } = this.state;
     let myVideoNameList = this.props.sectionVideo.map(element => {
-      return <MapVideo key={element.video_name} videoName= {element.video_name} videoUrl={element.video_url} id={this.props.id}/>
+      return (
+        <ListVideoName
+          key={element.video_name}
+          videoName={element.video_name}
+          videoUrl={element.video_url}
+          id={this.props.id}
+        />
+      );
     });
     return (
       <div className={classes.root}>
@@ -56,15 +61,15 @@ class Chapters extends Component {
             </Typography>
             <Typography className={classes.secondaryHeading}> </Typography>
           </ExpansionPanelSummary>
-          <ExpansionPanelDetails> 
-          <List component="nav">{myVideoNameList}</List>
+          <ExpansionPanelDetails>
+            <List component="nav">{myVideoNameList}</List>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
     );
   }
 }
-Chapters.propTypes = {
+Section.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
@@ -74,4 +79,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps,null)(withStyles(styles)(Chapters));
+export default connect(mapStateToProps, null)(withStyles(styles)(Section));

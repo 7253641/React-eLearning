@@ -9,11 +9,8 @@ import {
   PlaybackRateMenuButton,
   VolumeMenuButton,
 } from 'video-react';
-// import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import '../../../node_modules/video-react/dist/video-react.css';
-import { videoActions } from '../../actions/videoActions/index';
-import { connect } from 'react-redux';
 class Video extends Component {
   shouldComponentUpdate(nextProps) {
     if (this.props.src !== this.props.url) {
@@ -36,28 +33,8 @@ class Video extends Component {
             <VolumeMenuButton />
           </ControlBar>
         </Player>
-        {/* <div className="video-thumbnail">
-          <video
-            controls
-            src="http://10.10.1.65/videos/007_Quick_Introduction_To%20Spring_Framework.mp4"
-          />
-        </div> */}
       </div>
     );
   }
 }
-
-const mapStateToProps = state => {
-  return {
-    videoURL: state.videoReducer.URL ? state.videoReducer.URL : '',
-  };
-};
-const mapDispatchToProps = dispatch => {
-  return {
-    fetchVideo: () => {
-      dispatch(videoActions.fetchVideo());
-    },
-  };
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Video);
+export default Video;

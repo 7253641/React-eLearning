@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import Paper from 'material-ui/Paper';
 import Grid from 'material-ui/Grid';
 import './css/style.css';
 import { connect } from 'react-redux';
@@ -11,15 +10,10 @@ import { Link } from 'react-router-dom';
 import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
 import ReactStars from 'react-stars';
-import * as actionListSection from '../../actions/ChapterAction/ChapterAction';
 class ListCourse extends Component {
   componentDidMount() {
     this.props.onFetchData();
   }
-  // transformId = (id) =>{
-  //   console.log("quasdkjasdk",this.props.courses[8].id);
-  //   this.props.onTransformId(this.props.courses[8].id);
-  // }
   render() {
     return (
       <div className="root">
@@ -28,10 +22,7 @@ class ListCourse extends Component {
             return (
               <Grid key={course.id} item xs={12} sm={6} md={3}>
                 <Card className="card">
-                  <div
-                    className="imageShow"
-                    onClick={() => this.onClickShowId(course.id)}
-                  >
+                  <div className="imageShow">
                     <img
                       src={'http://10.10.1.65' + course.imageUrl}
                       alt="logo"
@@ -76,14 +67,13 @@ class ListCourse extends Component {
                       className="btn"
                       size="small"
                       variant="raised"
-                      onClick={() => this.onClickShowId(course.id)}
                       style={{
                         color: '#fff',
                         fontSize: '16px',
                         textTransform: 'lowercase',
                       }}
                     >
-                      <Link to={'/listchapter/' + course.id}> Click more </Link>
+                      <Link to={'/courses/' + course.id}> Click more </Link>
                     </Button>
                   </CardActions>
                 </Card>
@@ -94,9 +84,6 @@ class ListCourse extends Component {
       </div>
     );
   }
-  onClickShowId = id => {
-    if (this.props.courses.length > 0) this.props.onPostId(id);
-  };
   ratingChanged = rating => {
     console.log(this.props.getRating(rating));
   };
@@ -113,12 +100,6 @@ const mapDispatchToProps = (dispatch, props) => {
     onFetchData: () => {
       dispatch(actionListCourse.fetchDatasWithRedux());
     },
-    onPostId: id => {
-      dispatch(actionListSection.fetchDataSection(id));
-    },
-    // onTransformId: id => {
-    //   dispatch(action.fetchDataSection(id));
-    // },
     getRating: rating => {
       dispatch(actionListCourse.getRating(rating));
     },
