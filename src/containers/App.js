@@ -4,7 +4,7 @@ import Classes from './App.css';
 import BrowserRouter from 'react-router-dom/BrowserRouter';
 import { Route } from 'react-router-dom';
 import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-import Wrapper from '../components/Hoc/Hoc';
+import Wrapper from '../Hoc/Hoc';
 import Radium from 'radium';
 import CourseDatail from '../containers/CourseDetail/CourseDetail';
 import ListCourse from '../containers/ListCourse/ListCourse';
