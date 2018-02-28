@@ -29,7 +29,6 @@ export const fetchDataSection = id => {
         })
         .then(response => {
            dispatch(getDataSuccessSection(response.data));
-          //console.log(response.data);
         })
         .catch(response => dispatch(getDataFailureSection()));
     };
