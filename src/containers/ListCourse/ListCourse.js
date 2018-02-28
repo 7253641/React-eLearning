@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import Grid from 'material-ui/Grid';
 import './css/style.css';
 import { connect } from 'react-redux';
-import * as actionListCourse from '../../../actions/actionListCourse/actionListCourse.js';
+import * as actionListCourse from '../../actions/actionListCourse/actionListCourse.js';
 import IconButton from 'material-ui/IconButton';
 import Card, { CardActions, CardContent } from 'material-ui/Card';
 import Button from 'material-ui/Button';
@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom';
 import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
 import ReactStars from 'react-stars';
-import * as actionListSection from '../../../actions/ChapterAction/ChapterAction';
+import * as actionListSection from '../../actions/ChapterAction/ChapterAction';
 class ListCourse extends Component {
   componentDidMount() {
     this.props.onFetchData();
