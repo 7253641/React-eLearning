@@ -15,13 +15,14 @@ const styles = theme => ({
   },
   heading: {
     fontSize: '18px',
-    flexBasis: '33.33%',
+    flexBasis: '90.33%',
     flexShrink: 0,
   },
   secondaryHeading: {
     fontSize: '18px',
     color: 'black',
   },
+ 
 });
 
 class Section extends Component {
@@ -62,7 +63,7 @@ class Section extends Component {
             <Typography className={classes.secondaryHeading}> </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-            <List component="nav">{myVideoNameList}</List>
+              <List component="nav" style={{fontSize:'1.5rem'}}>{myVideoNameList}</List>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>

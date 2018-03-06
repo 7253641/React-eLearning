@@ -61,7 +61,7 @@ Link {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    background-color: #eeeeee;
+    
   }
   
   .data-info {
@@ -70,7 +70,6 @@ Link {
     border-radius: 2px;
     border: 1px solid #777777;
     margin: 5px 10px 5px 10px;
-    background-color: #eeeeee;
     padding: 5px 10px 5px 10px;
     color: #222222;
   }
@@ -78,7 +77,16 @@ Link {
   .data-loading {
     display: block;
     text-align: center;
-    background-color: #eeeeee;
+   
     border: 0;
     font-size: 5rem;
   }
+  .MuiGrid-spacing-xs-24-183{
+    margin: 0px!important;
+  }
+  .MuiTypography-subheading-391,.MuiTypography-subheading-137,
+  .MuiTypography-subheading-85, .MuiTypography-subheading-294
+   {
+    font-size: 1.5rem!important
+  }
+
