@@ -9,6 +9,7 @@ import Radium from 'radium';
 import CourseDatail from '../containers/CourseDetail/CourseDetail';
 import ListCourse from '../containers/ListCourse/ListCourse';
 import SignUp from './SignUp/SignUp';
+import LoginForm from '.././components/Forms/Login';
 
 const theme = createMuiTheme();
 class App extends Component {
@@ -18,7 +19,8 @@ class App extends Component {
         <BrowserRouter>
           <div className={Classes}>
             <Wrapper>
-              <Route path="/" exact component={ListCourse} />
+              <Route path="/" exact component={LoginForm} />
+              <Route path="/courses" exact component={ListCourse} />
               <Route path="/courses/:id" exact component={CourseDatail} />
               <Route
                 path="/courses/:id/:url/:name"
