@@ -11,12 +11,69 @@ import FavoriteIcon from 'material-ui-icons/Favorite';
 import ShareIcon from 'material-ui-icons/Share';
 import ReactStars from 'react-stars';
 class ListCourse extends Component {
-  componentDidMount() {
-    this.props.onFetchData();
+
+  constructor(props) {
+    super(props);
+    this.handleOnScroll = this.handleOnScroll.bind(this);
+    this.state = {
+      loading: false,
+    }
   }
+
+  loadEventBrowserBack() {
+    //  this.props.resetData();
+    if (this.props.indexPage === -1) {
+      this.props.increasePage();
+      this.props.fetchDatasIndexPage(0);
+    }
+  }
+
+  componentDidMount() {
+    // for (let i = 0; i <= this.props.indexPage; i++){
+    // console.log(i);
+
+    this.loadEventBrowserBack();
+    window.addEventListener('scroll', this.handleOnScroll);
+  }
+
+  componentWillUnmount() {
+    // this.props.resetData();
+    window.removeEventListener('scroll', this.handleOnScroll);
+
+  }
+
+  async fetchDatasFromIndexPage() {
+    await this.props.fetchDatasIndexPage(this.props.indexPage);
+  }
+
+  increaseIndexPage = () => {
+    this.props.increasePage();
+  }
+
+  // changeValueIsLoading = () => {
+  //   let {dispatch} = this.props;
+  //   dispatch(actionListCourse.loadingData());
+  // }
+
+  async handleOnScroll() {
+    var scrollTop = (document.documentElement && document.documentElement.scrollTop) || document.body.scrollTop;
+    var scrollHeight = (document.documentElement && document.documentElement.scrollHeight) || document.body.scrollHeight;
+    var clientHeight = document.documentElement.clientHeight || window.innerHeight;
+    var scrolledToBottom = Math.ceil(scrollTop + clientHeight) >= scrollHeight;
+    if (scrolledToBottom) {
+      if (this.props.canLoad && !this.props.isLoading) {
+        this.increaseIndexPage();
+        this.props.changeValueLoading(true);
+        await this.fetchDatasFromIndexPage();
+
+      }
+    }
+  }
+  
   render() {
     return (
-      <div className="root">
+      <div>
+        {/* <div className="data-container"> */}
         <Grid container spacing={24}>
           {this.props.courses.map((course, index) => {
             return (
@@ -78,9 +135,23 @@ class ListCourse extends Component {
                   </CardActions>
                 </Card>
               </Grid>
+            
             );
           })}
         </Grid>
+        {(() => {
+          if (this.props.isLoading && this.props.canLoad) {
+            return (
+              <div className="data-loading">
+                <i className="fa fa-refresh fa-spin"></i>
+              </div>
+            );
+          } else {
+            return (
+              <div className="data-loading"></div>
+            );
+          }
+        })()}
       </div>
     );
   }
@@ -93,16 +164,33 @@ const mapStateToProps = state => {
   return {
     courses: state.dataReducer.data,
     rating: state.dataReducer.rating,
+    indexPage: state.dataReducer.indexPage,
+    canLoad: state.dataReducer.canLoad,
+    isLoading: state.dataReducer.isLoading,
+    // states:{
+    //   courses: state.dataReducer.data,
+    //   rating: state.dataReducer.rating,
+    //   indexPage : state.dataReducer.indexPage,
+    // }
   };
 };
 const mapDispatchToProps = (dispatch, props) => {
   return {
-    onFetchData: () => {
-      dispatch(actionListCourse.fetchDatasWithRedux());
-    },
     getRating: rating => {
       dispatch(actionListCourse.getRating(rating));
     },
+    fetchDatasIndexPage: (indexPage) => {
+      dispatch(actionListCourse.fetchDatasIndexPage(indexPage))
+    },
+    increasePage: () => {
+      dispatch(actionListCourse.increasePage())
+    },
+    resetData: () => {
+      dispatch(actionListCourse.resetData());
+    },
+    changeValueLoading: (isLoading) => {
+      dispatch(actionListCourse.changeValueIsLoading(isLoading));
+    }
   };
 };
 export default connect(mapStateToProps, mapDispatchToProps)(ListCourse);
