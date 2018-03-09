@@ -14,38 +14,55 @@ const styles = theme => ({
   },
 });
 
-const header = props => {
-  return (
-    <header id="header">
-      <div className="Logo">
-        <ul>
-          <a href="/">E-LEARNING</a>
-        </ul>
-      </div>
-      <div className="Nav" dir="ltr">
-        <nav>
+class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      open: false,
+    };
+    this.handleOnClickLogin = this.handleOnClickLogin.bind(this);
+  }
+
+  handleOnClickLogin = () => {
+    this.setState(() => {
+      return {
+        open: true,
+      };
+    });
+  };
+
+  handleClose = () => {
+    this.setState({ open: false });
+  };
+
+  render() {
+    return (
+      <header id="header">
+        <div className="Logo">
           <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/About Us">About Us</a>
-            </li>
-            <li>
-              <a>|</a>
-            </li>
-            <li>
-              <a href="/Login">Login</a>
-            </li>
+            <a href="/">E-LEARNING</a>
           </ul>
-        </nav>
-      </div>
-    </header>
-  );
+        </div>
+        <div className="Nav" dir="ltr">
+          <nav>
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="/About Us">About Us</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    );
+  }
 };
 
-header.propTypes = {
+
+Header.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
-export default Radium(withStyles(styles)(header));
+export default Radium(withStyles(styles)(Header));

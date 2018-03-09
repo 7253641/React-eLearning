@@ -12,7 +12,7 @@ class DetailCourse extends Component {
             <Grid item xs={12} sm={12} md={6}>
               <div>
                 <div className="imageCourse">
-                  <img src={'http://10.10.1.65' + this.props.img} alt="logo" />
+                  <img src={'http://10.10.1.65:8080/api-1.1/api/' + this.props.img} alt="logo" />
                 </div>
               </div>
             </Grid>

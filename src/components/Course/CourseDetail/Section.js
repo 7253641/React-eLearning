@@ -63,7 +63,7 @@ class Section extends Component {
             <Typography className={classes.secondaryHeading}> </Typography>
           </ExpansionPanelSummary>
           <ExpansionPanelDetails>
-              <List component="nav" style={{fontSize:'1.5rem'}}>{myVideoNameList}</List>
+              <List component="nav" >{myVideoNameList}</List>
           </ExpansionPanelDetails>
         </ExpansionPanel>
       </div>
