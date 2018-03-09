@@ -43,7 +43,7 @@ const footer = () => {
           euismod convallis velit, eu auctor lacus vehicula sit amet.
         </p>
         <div className="footer-icons">
-          <a href="https://fecebook.com">
+          <a href="https://facebook.com">
             <i className="fa fa-facebook" />
           </a>
           <a href="https://twitter.com">

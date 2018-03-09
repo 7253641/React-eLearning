@@ -37,6 +37,9 @@ const header = props => {
             <li>
               <a href="/Login">Login</a>
             </li>
+            <li>
+              <a href="/SignUp">Sign Up</a> 
+            </li>
           </ul>
         </nav>
       </div>

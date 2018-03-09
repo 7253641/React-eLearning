@@ -8,6 +8,7 @@ import Wrapper from '../Hoc/Hoc';
 import Radium from 'radium';
 import CourseDatail from '../containers/CourseDetail/CourseDetail';
 import ListCourse from '../containers/ListCourse/ListCourse';
+import SignUp from './SignUp/SignUp';
 
 const theme = createMuiTheme();
 class App extends Component {
@@ -24,6 +25,7 @@ class App extends Component {
                 exact
                 component={MenuVideo}
               />
+              <Route path="/SignUp" exact component={SignUp}/>
             </Wrapper>
           </div>
         </BrowserRouter>
