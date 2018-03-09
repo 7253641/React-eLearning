@@ -6,8 +6,8 @@
     "axios": "^0.17.1",
     "bootstrap": "^4.0.0",
     "eject": "0.0.4",
+    "material-ui": "^1.0.0-beta.35",
     "install": "^0.10.4",
-    "material-ui": "^1.0.0-beta.32",
     "material-ui-icons": "^1.0.0-beta.17",
     "radium": "^0.21.2",
     "react": "^16.2.0",
@@ -19,6 +19,7 @@
     "react-scripts": "1.1.0",
     "react-stars": "^2.2.5",
     "redux": "^3.7.2",
+    "redux-form": "^7.3.0",
     "redux-lazy-scroll": "^0.1.1",
     "redux-thunk": "^2.2.0",
     "video-react": "^0.9.4"
