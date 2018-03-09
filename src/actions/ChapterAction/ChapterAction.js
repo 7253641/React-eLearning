@@ -20,7 +20,7 @@ export const getDataFailureSection = () => {
 export const fetchDataSection = id => {
   return dispatch => {
     return axios
-      .get('http://10.10.1.65:8080/api-1.1/api/course', {
+      .get('http://10.10.1.65:8080/api-1.0/api/course', {
         params: {
           id: id,
         },
