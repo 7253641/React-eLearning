@@ -1,0 +1,104 @@
+.Relative {
+    position: relative;
+    width: 100%;
+    float: left;
+}
+.ToolbarSection {
+    width: 100%;
+    float: left;
+    position: absolute;
+    display: block;
+}
+
+.Toolbar {
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+.ItemsSection {
+    width: 100%;
+    padding: 15px;
+    float: left;
+    display: inline;
+    box-sizing: border-box;
+}
+
+.ToolBar:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.Height10 {
+    height: 10px;
+}
+
+.LogoBlock {
+    top: 20px;
+    left: 15px;
+    position: absolute;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .LogoBlock {
+        display: block;
+        float: left;
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .LogoBlock {
+        text-align: center;
+        width: 100%;
+        float: left;
+        position: inherit;
+    }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .Toolbar {
+        width: 960px
+    }
+
+    .ItemsSection {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .Toolbar {
+        width: 748px
+    }
+    .ItemsSection {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .Toolbar {
+        width: 460px
+    }
+    .ItemsSection {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .Toolbar {
+        width: 300px
+    }
+    .ItemsSection {
+        width: 100%;
+    }
+}

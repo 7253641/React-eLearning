@@ -1,0 +1,74 @@
+.SubToolBarSection {
+    width: 100%;
+    float: left;
+    background-color: #49c4af;
+    display: block;
+}
+
+.SubToolbar {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+.ItemsSection {
+    width: 100%;
+    float: left;
+    display: inline;
+    box-sizing: border-box;
+    /* padding-bottom: 10px;
+    padding-top:  10px; */
+}
+
+.SubToolbar:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .ItemsSection {
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .SubToolbar {
+        width: 960px
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .SubToolbar {
+        width: 748px
+    }
+    .ItemsSection {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .SubToolbar {
+        width: 460px
+    }
+    .ItemsSection {
+        width: 100%
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .SubToolbar {
+        width: 300px
+    }
+    .ItemsSection {
+        width: 100%
+    }
+}

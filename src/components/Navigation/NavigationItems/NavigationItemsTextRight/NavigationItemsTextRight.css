@@ -1,0 +1,84 @@
+.NavigationItemsTextRight {
+    margin-left: 70px;
+    float: right;
+    text-align: right;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .NavigationItemsTextRight {
+        display: none
+    }
+}
+
+.NavigationItemsTextRight > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.NavigationItemsTextRight > ul > li {
+    display: inline-block
+}
+
+.NavigationItemsTextRight > ul > li:after {
+    content: "|";
+    display: inline-block;
+    margin: 0 20px;
+    color: #B7B7B7
+}
+
+.NavigationItemsTextRight > ul > li:last-child:after {
+    content: "";
+    margin: 0
+}
+
+.NavigationItemsTextRight li a {
+    color: #fff;
+    font-size: 16px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+.NavigationItemsTextRight > ul li:hover > ul.SubMenu {
+    display: block
+}
+
+.NavigationItemsTextRight > ul li > ul.SubMenu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    margin-left: -20px;
+    padding-top: 20px;
+    width: 170px
+}
+
+.NavigationItemsTextRight > ul li > ul.SubMenu > li {
+    padding: 10px 20px;
+    border-bottom: 1px solid #f1f1f1;
+    text-align: left;
+    background-color: #fff;
+    position: relative;
+    box-shadow: 0 2px 5px #f1f1f1
+}
+
+.NavigationItemsTextRight > ul li > ul.SubMenu > li:hover {
+    background-color: #f9f9f9
+}
+
+.NavigationItemsTextRight > ul li > ul.SubMenu > li:last-child {
+    border-bottom: 0 solid #000
+}
+
+.NavigationItemsTextRight > ul li > ul.SubMenu li a {
+    color: #727475;
+    font-size: 14px
+}
+
+.NavigationItemsTextRight > ul li > ul.SubMenu li > ul.SubMenu {
+    margin-left: 150px;
+    top: 0;
+    padding-top: 0;
+    padding-left: 20px
+}

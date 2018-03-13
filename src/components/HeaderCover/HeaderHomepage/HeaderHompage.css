@@ -1,0 +1,216 @@
+.HeaderSection {
+    width: 100%;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+}
+
+.HeaderHompageWrapper {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+.HeaderHompageWrapper:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.BackgroundRadient {
+    width: 100%;
+    float: left;
+    background: -moz-linear-gradient(top, rgba(101, 100, 96, 0.3) 0%, rgba(101, 100, 96, 0.3) 75%, rgba(101, 100, 96, 0) 100%);
+    background: -webkit-linear-gradient(top, rgba(101, 100, 96, 0.3) 0%, rgba(101, 100, 96, 0.6) 75%, rgba(101, 100, 96, 0) 100%);
+    background: linear-gradient(to bottom, rgba(101, 100, 96, 0.6) 0%, rgba(101, 100, 96, 0.6) 75%, rgba(101, 100, 96, 0) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#99656460', endColorstr='#00656460', GradientType=0)
+}
+
+.Height250 {
+    height: 250px;
+}
+
+.Height150 {
+    height: 150px;
+    width: 100%;
+    float: left;
+}
+
+.Height20 {
+    height: 20px;
+    width: 100%;
+    float: left;
+}
+
+.Height30 {
+    height: 30px;
+    width: 100%;
+    float: left;
+}
+
+.Height40 {
+    height: 40px;
+    width: 100%;
+    float: left;
+}
+
+.Height50 {
+    height: 50px;
+    width: 100%;
+    float: left;
+}
+
+.Height60 {
+    height: 60px;
+}
+
+.HeaderHompage {
+    padding: 15px;
+    float: left;
+    display: inline;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+.HeaderText1 {
+    color: #fff;
+    font-size: 70px;
+    line-height: 70px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.HeaderText2 {
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.SearchSection {
+    width: 100%;
+    float: left;
+}
+
+.InputSection {
+    width: 100%;
+    float: left;
+}
+
+.InputWrapper {
+    width: 33.33%;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+}
+
+.Input {
+    color: #a3a3a3;
+    font-size: 20px;
+    font-family: 'Varela Round', sans-serif;
+    background-color: #f9f9f9;
+    outline: 0;
+    border: 1px solid #f1f1f1;
+    padding: 10px 20px;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 3px;
+    border-width: 2px;
+}
+
+.ButtonSection {
+    width: 100%;
+    float: left;
+}
+
+.ButtonWrapper {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+}
+
+.Button {
+    border: 2px solid #49c4af;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    transition: all .8s ease;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #49c4af;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.Button:hover {
+    background: none;
+    border: 2px solid #fff;
+}
+
+.LevelSection {
+    width: 100%;
+    float: left
+}
+
+.LevelWrapper {
+    margin: 10px;
+    display: inline-block;
+    border-radius: 100%;
+    padding: 20px;
+    width: 33px;
+    height: 33px;
+    cursor: pointer;
+}
+
+.Level {
+
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .HeaderHompageWrapper {
+        width: 960px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .HeaderHompageWrapper {
+        width: 748px;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .HeaderHompageWrapper {
+        width: 460px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .HeaderText1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .InputWrapper {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .HeaderHompageWrapper {
+        width: 300px;
+    }
+}

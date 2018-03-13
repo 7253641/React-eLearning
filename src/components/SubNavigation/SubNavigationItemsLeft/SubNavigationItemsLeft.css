@@ -1,0 +1,79 @@
+.SubNavigationItemsLeft {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 50%;
+    float: left;
+    display: inline;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+.SubNavigationItemLeft .SubMenu {
+    color: #a3a3a3;
+}
+
+.SubNavigationItemLeft > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.SubNavigationItemLeft > ul > li {
+    display: inline-block
+}
+
+.SubNavigationItemLeft> ul > li:after {
+    content: "|";
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 13px;
+    color: #b59974
+}
+
+.SubNavigationItemLeft > ul > li:last-child:after {
+    content: "";
+    margin: 0
+}
+
+.SubNavigationItemLeft li a {
+    font-size: 13px;
+}
+
+.SubNavigationItemLeft > ul li:hover > ul.SubMenu {
+    display: block
+}
+
+.SubNavigationItemLeft > ul li > ul.SubMenu {
+    padding: 10px 0 0 15px;
+    position: absolute;
+    margin: 0;
+    list-style: none;
+    display: none;
+    z-index: 9
+}
+
+.SubNavigationItemLeft > ul li > ul.SubMenu > li {
+    padding: 7px 15px;
+    font-size: 13px;
+    border-bottom: 1px solid #595959;
+    background-color: #444
+}
+
+.SubNavigationItemLeft > ul li > ul.SubMenu > li:last-child {
+    border-bottom: 0 solid #000
+}
+
+.SubNavigationItemLeft img {
+    width: 15px;
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .SubNavigationItemsLeft {
+        text-align: center;
+        width: 100%;
+    }
+
+}
