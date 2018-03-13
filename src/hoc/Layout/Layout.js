@@ -4,6 +4,7 @@ import Aux from '../Aux/Aux';
 import SubToolbar from '../../components/SubNavigation/SubToolbar/SubToolbar';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import HeaderCover from '../../components/HeaderCover/HeaderCover';
+import Footer from '../../components/Footer/Footer';
 
 class Layout extends Component {
     state = {
@@ -21,6 +22,7 @@ class Layout extends Component {
                 <main>
                     {this.props.children}
                 </main>
+                <Footer />
             </Aux>
         );
     }

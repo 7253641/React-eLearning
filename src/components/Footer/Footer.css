@@ -1,0 +1,164 @@
+.FooterSection {
+    width: 100%;
+    float: left;
+}
+
+.Height20 {
+    height: 20px;
+    width: 100%;
+    float: left;
+}
+
+.Height50 {
+    height: 50px;
+    width: 100%;
+    float: left;
+}
+
+.FooterPanel {
+    width: 100%;
+    float: left;
+    background-color: #444;
+}
+
+.FooterPanelClearfix {
+    width: 1200px;
+    margin: auto;
+    padding: 0
+}
+
+.FooterPanelClearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.FooterPanelResponsive {
+    padding: 15px;
+    float: left;
+    display: inline;
+    box-sizing: border-box;
+    width: 100%;
+    text-align: center;
+}
+
+.LogoSection {
+    width: 100%;
+    float: left;
+}
+
+.SocialSection {
+    display: inline-block;
+}
+
+.Icon {
+    margin-right: 10px;
+    width: 40px;
+}
+
+.FooterToolbar {
+    width: 100%;
+    float: left;
+    background-color: #444;
+}
+
+.Toolbar {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+    border-top: 1px solid #595959
+}
+
+.Toolbar:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.CopyrightSection {
+    padding: 15px;
+    float: left;
+    display: inline;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.CopyrightText {
+    text-align: center;
+    color: #a3a3a3;
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.MenuSection {
+    padding: 15px;
+    float: left;
+    display: inline;
+    box-sizing: border-box;
+    text-align: right;
+    width: 50%;
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .FooterPanelClearfix {
+        width: 960px
+    }
+    .Toolbar {
+        width: 960px
+    }
+    .Copyright {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .FooterPanelClearfix {
+        width: 748px
+    }
+    .Toolbar {
+        width: 748px
+    }
+    .Copyright {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .FooterPanelClearfix {
+        width: 460px
+    }
+    .Toolbar {
+        width: 460px
+    }
+    .Copyright {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .FooterPanelClearfix {
+        width: 300px
+    }
+    .Toolbar {
+        width: 300px
+    }
+    .Copyright {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .CopyrightSection {
+        text-align: center;
+    }
+}
