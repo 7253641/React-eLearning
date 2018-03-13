@@ -12,7 +12,7 @@ const navigationItemsIconRight = (props) => (
             <a><img className={classes.MenuImg} src={MenuIcon} alt="MyIcon"/></a>
             <div className={classes.CartBlock} >
                 <a><img className={classes.CartImg} src={CartIcon} alt="MyIcon"/></a>
-                <a className={classes.CartAmount}>2</a>
+                <a className={classes.CartAmount}>{props.amount}</a>
             </div>
             <a><img className={classes.SearchImg} src={SearchIcon} alt="MyIcon"/></a>
         </div>

@@ -5,7 +5,7 @@ import NavigationItemsTextRight from './NavigationItemsTextRight/NavigationItems
 
 const navigationItems = (props) => (
     <div>
-        <NavigationItemsIconRight />
+        <NavigationItemsIconRight amount={props.cartAmount}/>
         <NavigationItemsTextRight />
     </div>
 );

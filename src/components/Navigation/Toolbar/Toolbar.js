@@ -16,7 +16,7 @@ const toolbar = (props) => (
                             <div className={classes.LogoBlock} >
                                 <a><Logo /></a>
                             </div>
-                            <NavigationItems />
+                            <NavigationItems cartAmount={props.cartAmount}/>
                         <div className={classes.Height10} />
                     </div>
                 </div>
