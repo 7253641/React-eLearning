@@ -5,7 +5,7 @@ import HeaderHompage from './HeaderHomepage/HeaderHomepage';
 const headerCover = (props) => {
     let component = null;
     if (props.isHomepage) {
-        component = <HeaderHompage ImageUrl={'https://i.imgur.com/793X3RJ.jpg'}/>
+        component = <HeaderHompage ImageUrl={props.imageUrl}/>
     } else {
         component = (
             <div>
