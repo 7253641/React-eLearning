@@ -1,9 +1,7 @@
 import React from 'react';
 
 import classes from './HeaderHompage.css';
-import BasicIcon from '../../../assets/images/icon-basic.svg';
-import MediumIcon from '../../../assets/images/icon-medium.svg';
-import AdvancedIcon from '../../../assets/images/icon-advanced.svg';
+import IconLevel from '../../UI/IconLevel/IconLevel';
 import '../../../assets/css/Tooltip.css';
 
 const headerHompage = (props) => {
@@ -49,13 +47,13 @@ const headerHompage = (props) => {
                         <div className={classes.Height150} />
                         <div className={classes.LevelSection} >
                             <div className={classes.LevelWrapper} style={basicLevel}>
-                                <a className="hint--elearning" data-hint="Basic Courses"><img src={BasicIcon} width="33" alt="MyIcon" /></a>
+                                <a className="hint--elearning" data-hint="Basic Courses"><IconLevel levelType="basic" widthSize={33} /></a>
                             </div>
                             <div className={classes.LevelWrapper} style={mediumLevel}>
-                                <a className="hint--elearning" data-hint="Medium Courses"><img src={MediumIcon} width="33" alt="MyIcon" /></a>
+                                <a className="hint--elearning" data-hint="Medium Courses"><IconLevel levelType="medium" widthSize={33} /></a>
                             </div>
                             <div className={classes.LevelWrapper} style={advancedLevel}>
-                                <a className="hint--elearning" data-hint="Advanced Courses"><img src={AdvancedIcon} width="33" alt="MyIcon" /></a>
+                                <a className="hint--elearning" data-hint="Advanced Courses"><IconLevel levelType="advanced" widthSize={33} /></a>
                             </div>
                         </div>
                     </div>
