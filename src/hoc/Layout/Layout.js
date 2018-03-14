@@ -12,14 +12,26 @@ class Layout extends Component {
             languages: ['English', 'VietNamese'],
             social: ['Facebook', 'Twitter', 'Instagram']
         },
-        homePageImageUrl: 'https://i.imgur.com/793X3RJ.jpg',
-        cartAmount: '10'
+        cartAmount: '1',
+        homepage: {
+            imageUrl: 'https://i.imgur.com/793X3RJ.jpg'
+        },
+        coursespage: {
+            title: 'Courses',
+            imageUrl: 'https://i.imgur.com/DCP0DZJ.png',
+            directories: ['Home', 'Courses']
+        }
     }
     render() {
         return (
             <Aux>
-                <SubToolbar submenuInit={this.state.submenuInit}></SubToolbar>
-                <Toolbar homepage={true} imageUrl={this.state.homePageImageUrl} cartAmount={this.state.cartAmount}></Toolbar>
+                <SubToolbar submenuInit={this.state.submenuInit} />
+                {/* <Toolbar homepage={true} imageUrl={this.state.homepage.imageUrl} cartAmount={this.state.cartAmount}></Toolbar> */}
+                <Toolbar
+                    imageUrl={this.state.coursespage.imageUrl}
+                    title={this.state.coursespage.title}
+                    cartAmount={this.state.cartAmount}
+                    directories={this.state.coursespage.directories}/>
                 <div className={classes.Height50} />
                 <main>
                     {this.props.children}

@@ -1,0 +1,68 @@
+.Section {
+    width: 100%;
+    float: left;
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.SectionClearfix {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+.SectionClearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.Container {
+    padding: 15px;
+    float: left;
+    display: inline;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.Container a {
+    font-family: 'Varela Round',sans-serif;
+    color: #a3a3a3;
+}
+
+.Image {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .SectionClearfix {
+        width: 960px
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .SectionClearfix {
+        width: 748px
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .SectionClearfix {
+        width: 460px
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .SectionClearfix {
+        width: 300px
+    }
+}

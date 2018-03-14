@@ -6,7 +6,7 @@ import '../../../assets/css/Tooltip.css';
 
 const headerHompage = (props) => {
     const headerSectionStyle = {
-        backgroundImage: 'url(' + props.ImageUrl +')'
+        backgroundImage: 'url(' + props.imageUrl +')'
     }
     const basicLevel = {
         backgroundColor: '#ff6f58'

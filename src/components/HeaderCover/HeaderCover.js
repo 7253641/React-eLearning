@@ -1,17 +1,15 @@
 import React from 'react';
 
 import HeaderHompage from './HeaderHomepage/HeaderHomepage';
+import HeaderOfOther from './HeaderOfOther/HeaderOfOther';
 
 const headerCover = (props) => {
+    console.log(props.directories)
     let component = null;
     if (props.isHomepage) {
-        component = <HeaderHompage ImageUrl={props.imageUrl}/>
+        component = <HeaderHompage imageUrl={props.imageUrl}/>
     } else {
-        component = (
-            <div>
-
-            </div>
-        );
+        component = <HeaderOfOther title={props.title} imageUrl={props.imageUrl} directories={props.directories}/>
     }
 
     return (

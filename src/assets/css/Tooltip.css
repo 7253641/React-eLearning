@@ -1,6 +1,8 @@
 [class*="hint--"] {
     position: relative;
     display: inline-block;
+    margin-bottom: -5px;
+    cursor: pointer;
 }
 
 [class*="hint--"]:before, [class*="hint--"]:after {

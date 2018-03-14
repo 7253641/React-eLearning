@@ -22,7 +22,7 @@ const toolbar = (props) => (
                 </div>
             </div>
         </div>
-        <HeaderCover isHomepage={props.homepage} imageUrl={props.imageUrl}></HeaderCover>
+        <HeaderCover isHomepage={props.homepage} imageUrl={props.imageUrl} title={props.title} directories={props.directories}/>
     </Aux>
 
 );

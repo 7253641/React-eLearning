@@ -34,7 +34,7 @@ const category = (props) => {
                         <div className={classes.DecriptionWrapper}>
                             <div className={classes.Wrapper} >
                                 <div className={classes.IconLevelWrapper} style={iconLevelBackgroundColor}>
-                                    <a className="hint--elearning" style={{height: '20px', verticalAlign: 'middle'}} data-hint={dataHint}><IconLevel levelType={props.levelType} widthSize={20} /></a>
+                                    <a className="hint--elearning" style={{verticalAlign: 'middle'}} data-hint={dataHint}><IconLevel levelType={props.levelType} widthSize={20} /></a>
                                 </div>
                                 <h4><a className={classes.CategoryName}>{props.categoryName}</a></h4>
                             </div>

@@ -1,0 +1,198 @@
+.CoursesSection {
+    width: 100%;
+    float: left;
+}
+
+.Height20 {
+    width: 100%;
+    float: left;
+    height: 20px
+}
+
+.CoursesSectionClearfix {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+.CoursesSectionClearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+
+.SectionWidth100Percentage {
+    width: 100%;
+}
+
+.SearchAndSettingSection {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.SearchAndSettingContainer {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.SearchSection {
+    width: 70%;
+    float: left;
+}
+
+.SearchContainer {
+    width: 50%;
+    float: left;
+}
+
+.InputSection {
+    width: 50%;
+    float: left;
+}
+
+.InputContainer {
+    width: 100%;
+    float: left;
+    box-sizing: border-box;
+    position: relative;
+    padding-right: 20px;
+}
+
+.InputContainer img {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    margin-top: 5px;
+}
+
+.InputStyle {
+    font-size: 15px;
+    color: #a3a3a3;
+    font-family: 'Varela Round',sans-serif;
+    outline: 0;
+    border: 1px solid #f1f1f1;
+    padding: 10px 20px;
+    float: left;
+    width: 100%;
+    box-sizing: border-box;
+    padding-left: 25px;
+    border-width: 2px;
+    background: none;
+    border-top-width: 0;
+    border-right-width: 0;
+    border-left-width: 0;
+}
+
+.SearchButtonContainer {
+    width: 50%;
+    float: left;
+}
+
+.SearchButtonStyle {
+    float: left;
+}
+
+.SearchButtonStyle a {
+    border: 2px solid #49c4af;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    transition: all .8s ease;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    color: #fff;
+    background-color: #49c4af;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.SearchButtonStyle a:hover {
+    background-color: #fff;
+    color: #49c4af;
+}
+
+.SettingSection {
+    width: 30%;
+    float: left;
+    text-align: right;
+}
+
+.SettingIconStyle {
+    display: inline-block;
+    background-color: #ffb72f;
+    border: 1px solid #ffb72f;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 3px
+}
+
+.ListIconStyle {
+    display: inline-block;
+    background-color: #49c4af;
+    border: 1px solid #49c4af;
+    padding: 8px;
+    margin-right: 10px;
+    border-radius: 3px
+}
+
+.GridIconStyle {
+    display: inline-block;
+    padding: 8px;
+    border-radius: 3px;
+    border: 1px solid #a3a3a3;
+}
+
+.FloatLeft {
+    float: left;
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .CoursesSectionClearfix {
+        width: 960px
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .CoursesSectionClearfix {
+        width: 748px
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .CoursesSectionClearfix {
+        width: 460px
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .CoursesSectionClearfix {
+        width: 300px
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .SearchSection {
+        width: 100%;
+    }
+    .SearchButtonStyle {
+        width: 100%;
+    }
+    .SettingSection {
+        width: 100%;
+    }
+}

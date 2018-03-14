@@ -1,0 +1,152 @@
+.CourseSectionPosition {
+    width: 33.33%;
+    float: left;
+}
+
+.Height20 {
+    height: 20px;
+}
+
+.CourseSection {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.CourseContainer {
+    width: 100%;
+    float: left;
+    border: 1px solid #f1f1f1;
+}
+
+.ImageSection {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.BottomInfoSection {
+    position: absolute;
+    bottom: 20px;
+}
+
+.BottomInfo {
+    display: table;
+    float: left;
+}
+
+.ImageStyle {
+    margin-right: 10px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.TextStyle {
+    color: #fff;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.Description {
+    width: 100%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.Description h3 {
+    margin: 0;
+    padding: 0;
+    font-weight: 400
+}
+
+.Description p {
+    margin: 0;
+    padding: 0;
+}
+
+.Title {
+    color: #727475;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.DescriptionText {
+    color: #a3a3a3;
+}
+
+.DetailCourseSection {
+    width: 100%;
+    float: left;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-top: 1px solid #f1f1f1;
+}
+
+.AuthorSection {
+    width: 33%;
+    float:left;
+}
+
+.AuthorContainer {
+    display: table;
+    float: left;
+}
+
+.AuthorImage {
+    margin-right: 10px;
+    display: table-cell;
+    vertical-align: middle;
+    border-radius: 100%;
+}
+
+.AuthorName {
+    display: table-cell;;
+    vertical-align: middle;
+    font-size: 15px;
+    line-height: 15px;
+    font-family: 'Varela Round',sans-serif;
+    color: #a3a3a3;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.PriceSection {
+    width: 33%;
+    float:left;
+    text-align: right;
+}
+
+.PriceStyle {
+    display: inline-block;
+    color: #fff;
+    background-color: #49c4af;
+    font-family: 'Montserrat', sans-serif;
+    padding: 8px;
+    border-radius: 3px;
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.Gradient {
+    background: -moz-linear-gradient(top, rgba(101, 100, 96, 0.8) 0%, rgba(101, 100, 96, 0) 35%, rgba(101, 100, 96, 0) 45%, rgba(101, 100, 96, 0.8) 100%);
+    background: -webkit-linear-gradient(top, rgba(101, 100, 96, 0.8) 0%, rgba(101, 100, 96, 0) 35%, rgba(101, 100, 96, 0) 45%, rgba(101, 100, 96, 0.8) 100%);
+    background: linear-gradient(to bottom, rgba(101, 100, 96, 0.8) 0%, rgba(101, 100, 96, 0) 35%, rgba(101, 100, 96, 0) 45%, rgba(101, 100, 96, 0.8) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#99656460', endColorstr='#99656460', GradientType=0);
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .CourseSectionPosition {
+        width: 100%;
+    }
+}
