@@ -9,6 +9,7 @@
 # production
 /build
 
+develop.html
 # misc
 .DS_Store
 .env.local
