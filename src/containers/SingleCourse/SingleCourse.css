@@ -1,0 +1,414 @@
+.Height40 {
+    height: 40px;
+    width: 100%;
+    float: left;
+}
+
+.Height50 {
+    height: 50px;
+    width: 100%;
+    float: left;
+}
+
+.Height70 {
+    height: 70px;
+    width: 100%;
+    float: left;
+}
+
+.Height98 {
+    height: 98px;
+    width: 100%;
+    float: left;
+}
+
+.Height5 {
+    height: 5px;
+    width: 100%;
+    float: left;
+}
+
+.Height10 {
+    height: 10px;
+    width: 100%;
+    float: left;
+}
+
+.Height20 {
+    height: 20px;
+    width: 100%;
+    float: left;
+}
+
+.Height30 {
+    height: 30px;
+    width: 100%;
+    float: left;
+}
+
+.SingleCourseSection {
+    width: 100%;
+    float: left;
+}
+
+.SingleCourseContainer {
+    width: 1200px;
+    margin: auto;
+    padding: 0;
+}
+
+.SingleCourseContainer:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.DetailCourseSection {
+    width: 66.66%;
+    float: left;
+}
+
+.DetailCourseWrapper {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.Title {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 30px;
+    line-height: 30px;
+    color: #727475;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.AuthorSection {
+    width: 25%;
+    float: left;
+}
+
+.AuthorWrapper {
+    display: table;
+    float: left;
+}
+
+.AuthorAvatar {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.AvatarStyle {
+    margin-right: 10px;
+    border-radius: 100%;
+}
+
+.AuthorName {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.AuthorName p {
+    font-size: 13px;
+    line-height: 13px;
+    font-family: 'Varela Round',sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+    color: #a3a3a3;
+}
+
+.AuthorName h5 {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    color: #727475;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.CategorySection {
+    width: 25%;
+    float: left;
+}
+
+.CategoryWrapper {
+    display: table;
+    float: left;
+}
+
+.CategoryIcon {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.CategoryTitle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.CategoryTitle p {
+    font-size: 13px;
+    line-height: 13px;
+    font-family: 'Varela Round',sans-serif;
+    color: #a3a3a3;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.CategoryTitle h5 {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+    color: #727475;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.ImageCourseSection {
+    width: 100%;
+    float: left;
+    position: relative;
+}
+
+.Gradient {
+    background: -moz-linear-gradient(top, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.1) 60%, rgba(101, 100, 96, 0.65) 100%);
+    background: -webkit-linear-gradient(top, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.1) 60%, rgba(101, 100, 96, 0.65) 100%);
+    background: linear-gradient(to bottom, rgba(101, 100, 96, 0) 0%, rgba(101, 100, 96, 0.1) 60%, rgba(101, 100, 96, 0.65) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00656460', endColorstr='#a6656460', GradientType=0);
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.BookmarkAndCompareSection {
+    position: absolute;
+    bottom: 20px;
+}
+
+.BookmarkAndCompareSection a {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 13px;
+    color: white;
+    border: 1px solid #fff;
+    font-family: 'Montserrat', sans-serif;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.DescriptionAndVideosLinkSection {
+    width: 100%;
+    float: left;
+}
+
+.VideosLinkSection h2 {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: #727475;
+    margin: 10px;
+    padding: 0;
+    font-weight: 800;
+}
+
+.VideosLinkSection span {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 20px;
+}
+
+.DescriptionAndVideosLinkSection h3 {
+    font-family: 'Montserrat',sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+    color: #727475;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.DescriptionAndVideosLinkSection p {
+    font-family: 'Varela Round',sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: #a3a3a3;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+.VideosLinkSection {
+    width: 100%;
+    float: left;
+}
+
+.VideosLinkTab {
+    width: 100%;
+    float: left;
+    border-top: 1px solid #f1f1f1;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.VideoLinkTabLeft {
+    width: 15%;
+    float: left;
+}
+
+.SpanStyle {
+    color: #a3a3a3;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    line-height: 12px;
+    margin-left: 10px;
+}
+
+.VideoName {
+    width: 75%;
+    float: left;
+}
+
+.VideoName h4 {
+    padding: 5px;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 17px;
+    line-height: 17px;
+    color: #727475;
+    margin: 0;
+    font-weight: 400;
+}
+
+.PreviewButton {
+    width: 10%;
+    float: left;
+    text-align: right;
+
+}
+
+.PreviewButton a {
+    background-color: #49c4af;
+    font-size: 13px;
+    line-height: 13px;
+    color: #fff;
+    font-family: 'Montserrat',sans-serif;
+    text-decoration: none;
+    text-align: right;
+    padding: 8px;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.DetailCoursePlusSection {
+    width: 33.33%;
+    float: left;
+}
+
+.DetailCoursePlusWrapper {
+    width: 100%;
+    float: left;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.TableStyle {
+    width: 100%;
+    float: left;
+    border-collapse: collapse;
+}
+
+.TableStyle tr {
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.TableStyle td {
+    padding: 20px;
+}
+
+.TableStyle h4 {
+    text-align: right;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 17px;
+    line-height: 17px;
+    color: #727475;
+    margin: 0;
+    padding: 0;
+    font-weight: 400;
+}
+
+@media only screen and (min-width: 960px) and (max-width: 1199px) {
+    .SingleCourseContainer {
+        width: 960px
+    }
+    .VideoLinkTabLeft {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    .SingleCourseContainer {
+        width: 748px
+    }
+    .DetailCourseSection {
+        width: 100%;
+    }
+    .DeatilCoursePlusSection {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .SingleCourseContainer {
+        width: 460px
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+    body {
+        -webkit-text-size-adjust: none
+    }
+    .SingleCourseContainer {
+        width: 300px
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+    .VideoName {
+        width: 100%
+    }
+    .PreviewButton {
+        width: 100%;
+        text-align: left;
+        margin-top: 5px;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+    .DetailCourseSection {
+        width: 100%;
+    }
+    .Author {
+        width: 50%;
+    }
+    .CategorySection {
+        width: 50%;
+    }
+    .DetailCoursePlusSection {
+        width: 100%;
+    }
+}

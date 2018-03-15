@@ -2,9 +2,15 @@ import React, { Component } from 'react';
 
 import classes from './Homepage.css';
 import Category from '../../components/Category/Category';
+import Aux from '../../hoc/Aux/Aux';
+import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 
 class Homepage extends Component {
     state = {
+        cartAmount: '1',
+        homepage: {
+            imageUrl: 'https://i.imgur.com/793X3RJ.jpg'
+        },
         categories: [
             {
                 categoryName: 'e-Commerce',
@@ -60,24 +66,32 @@ class Homepage extends Component {
 
     render() {
         return (
-            <div className={classes.HomepageSection}>
-                <div className={classes.HomepageSectionClearfix}>
-                    <div className={classes.CategorySection}>
-                        <h1><strong>Our Categories</strong></h1>
-                        <div className={classes.Height10}></div>
-                        <h3>The Best Courses</h3>
+            <Aux>
+                <Toolbar
+                    homepage={true}
+                    imageUrl={this.state.homepage.imageUrl}
+                    cartAmount={this.state.cartAmount} />
+                <div className={classes.Height50} />
+                <div className={classes.HomepageSection}>
+                    <div className={classes.HomepageSectionClearfix}>
+                        <div className={classes.CategorySection}>
+                            <h1><strong>Our Categories</strong></h1>
+                            <div className={classes.Height10}></div>
+                            <h3>The Best Courses</h3>
+                        </div>
+                        {this.state.categories.map((category, index) => (
+                            <Category
+                                key={index}
+                                categoryName={category.categoryName}
+                                levelType={category.level}
+                                amount={category.amount}
+                                imageUrl={category.imageUrl}
+                                isBig={category.bigImage}/>
+                        ))}
                     </div>
-                    {this.state.categories.map((category, index) => (
-                        <Category
-                            key={index}
-                            categoryName={category.categoryName}
-                            levelType={category.level}
-                            amount={category.amount}
-                            imageUrl={category.imageUrl}
-                            isBig={category.bigImage}/>
-                    ))}
                 </div>
-            </div>
+                <div className={classes.Height70} />
+            </Aux>
         );
     }
 }

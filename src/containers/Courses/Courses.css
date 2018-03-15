@@ -9,6 +9,19 @@
     height: 20px
 }
 
+.Height50 {
+    height: 50px;
+    width: 100%;
+    float: left;
+}
+
+.Height70 {
+    height: 70px;
+    width: 100%;
+    float: left;
+}
+
+
 .CoursesSectionClearfix {
     width: 1200px;
     margin: auto;
