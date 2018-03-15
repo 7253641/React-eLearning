@@ -215,8 +215,8 @@
 
 .VideosLinkSection h2 {
     font-family: 'Montserrat',sans-serif;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 15px;
+    line-height: 15px;
     color: #727475;
     margin: 10px;
     padding: 0;
@@ -225,8 +225,8 @@
 
 .VideosLinkSection span {
     font-weight: 400;
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 12px;
 }
 
 .DescriptionAndVideosLinkSection h3 {
