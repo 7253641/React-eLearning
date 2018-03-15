@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../../assets/css/Tooltip.css';
+import { NavLink } from 'react-router-dom';
 
 import classes from './Courses.css';
 import IconSearch from '../../assets/images/icon-pen.svg';
@@ -132,16 +133,18 @@ class Courses extends Component {
 
                             <div className={classes.SectionWidth100Percentage}>
                                 {this.state.courses.map((course, index) => (
-                                    <Course
-                                        key={index}
-                                        imageUrl={course.imageUrl}
-                                        lastUpdated={course.lastUpdated}
-                                        courseTime={course.courseTime}
-                                        courseTitle={course.title}
-                                        courseDescription={course.description}
-                                        authorAvatarUrl={course.avatarUrl}
-                                        authorName={course.author}
-                                        price={course.price}/>
+                                    <NavLink to="/courses/9">
+                                        <Course
+                                            key={index}
+                                            imageUrl={course.imageUrl}
+                                            lastUpdated={course.lastUpdated}
+                                            courseTime={course.courseTime}
+                                            courseTitle={course.title}
+                                            courseDescription={course.description}
+                                            authorAvatarUrl={course.avatarUrl}
+                                            authorName={course.author}
+                                            price={course.price}/>
+                                    </NavLink>
                                 ))}
                             </div>
                     </div>

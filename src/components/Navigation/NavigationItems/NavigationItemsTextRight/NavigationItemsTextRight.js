@@ -6,9 +6,9 @@ import classes from './NavigationItemsTextRight.css';
 const navigationItemsTextRight = (props) => (
     <div className={classes.NavigationItemsTextRight}>
         <ul>
-            <ItemText>HOME</ItemText>
-            <ItemText>COURSES</ItemText>
-            <ItemText>CONTACT</ItemText>
+            <ItemText link="/">HOME</ItemText>
+            <ItemText link="/courses" exact>COURSES</ItemText>
+            <ItemText link="">CONTACT</ItemText>
         </ul>
     </div>
 );

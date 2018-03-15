@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { Route, Switch, withRouter, Redirect } from 'react-router-dom';
+// import { connect } from 'react-redux';
 
 import Layout from './hoc/Layout/Layout';
 import Homepage from './containers/Homepage/Homepage';
@@ -8,13 +10,19 @@ import SingleCourse from './containers/SingleCourse/SingleCourse';
 class App extends Component {
   render() {
     return (
-      <Layout>
-          {/* <Homepage /> */}
-          {/* <Courses /> */}
-          <SingleCourse />
-      </Layout>
+        <Layout>
+        {/* <Homepage /> */}
+        {/* <Courses /> */}
+        {/* <SingleCourse /> */}
+            <Switch>
+                <Route path="/courses/9" component={SingleCourse} />
+                <Route path="/courses" exact component={Courses}/>
+                <Route path="/" component={Homepage} />
+                <Redirect to="/" />
+            </Switch>
+        </Layout>
     );
   }
 }
 
-export default App;
+export default withRouter(App);
