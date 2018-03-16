@@ -26,7 +26,6 @@ export const fetchCourses = () => {
         dispatch(fetchCoursesStart());
         axios.get('/courses')
             .then(response => {
-                console.log("[Courses response: ]", response);
                 dispatch(fetchCoursesSuccess(response.data));
             })
             .catch(error => {

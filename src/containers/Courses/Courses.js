@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import '../../assets/css/Tooltip.css';
-import { NavLink } from 'react-router-dom';
 
 import classes from './Courses.css';
 import IconSearch from '../../assets/images/icon-pen.svg';
@@ -141,18 +140,18 @@ class Courses extends Component {
 
                             <div className={classes.SectionWidth100Percentage}>
                                 {this.props.courses.map((course, index) => (
-                                    <NavLink to="/courses/9">
                                         <Course
                                             key={index}
+                                            courseId={course.id}
                                             imageUrl={'http://10.10.1.65/' + course.imageUrl}
                                             lastUpdated={'12/12/2018'}
                                             courseTime={8}
-                                            courseTitle={course.title}
+                                            courseTitle={course.courseName}
                                             courseDescription={course.description.substring(0, 130).trim() + '...'}
                                             authorAvatarUrl={'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png'}
                                             authorName={'Spectre'}
-                                            price={course.price}/>
-                                    </NavLink>
+                                            price={course.price}
+                                        />
                                 ))}
                             </div>
                     </div>
@@ -164,11 +163,10 @@ class Courses extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log("[mapStateToProps]", state.coursesReducer.courses)
     return {
-        courses: state.coursesReducer.courses,
-        coursesPage: state.coursesReducer.coursesPage,
-        cartAmount: state.coursesReducer.cartAmount
+        courses: state.coursesData.courses,
+        coursesPage: state.coursesData.coursesPage,
+        cartAmount: state.coursesData.cartAmount
     }
 };
 

@@ -151,6 +151,53 @@
     box-sizing: border-box;
 }
 
+.MoreButton {
+    text-align: center;
+    width: 100%;
+}
+
+.MoreButtonStyle {
+    border: 2px solid #49c4af;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    transition: all .8s ease;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    color: #fff;
+    background-color: #49c4af;
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+
+.SearchButtonStyle a {
+    border: 2px solid #49c4af;
+    -webkit-transition: all .8s ease;
+    -moz-transition: all .8s ease;
+    -o-transition: all .8s ease;
+    -ms-transition: all .8s ease;
+    transition: all .8s ease;
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    width: 100%;
+    color: #fff;
+    background-color: #49c4af;
+    font-family: 'Montserrat', sans-serif;
+    padding: 10px 20px;
+    border-radius: 3px;
+}
+
+.MoreButtonStyle:hover {
+    background-color: #fff;
+    color: #49c4af;
+}
+
 @media only screen and (min-width: 320px) and (max-width: 1199px) {
     .CourseSectionPosition {
         width: 100%;

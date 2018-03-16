@@ -1,5 +1,6 @@
 import React from 'react';
 import '../../assets/css/Tooltip.css';
+import { Link } from 'react-router-dom';
 
 import classes from './Course.css';
 import IconHeart from '../../assets/images/icon-heart.svg';
@@ -44,8 +45,8 @@ const course = (props) => {
                             </div>
                         </div>
                         <div className={classes.AuthorSection} >
-                            <div className={classes.AuthorContainer}>
-                                <img alt="MyIcon" className={classes.AuthorImage} width="25" style={{opacity: 0}} src={props.authorAvatarUrl} />
+                            <div className={classes.MoreButton}>
+                                <Link className={classes.MoreButtonStyle} to={"/courses/" + props.courseId}>MORE</Link>
                             </div>
                         </div>
                         <div className={classes.PriceSection} >

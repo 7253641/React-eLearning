@@ -4,7 +4,6 @@ import HeaderHompage from './HeaderHomepage/HeaderHomepage';
 import HeaderOfOther from './HeaderOfOther/HeaderOfOther';
 
 const headerCover = (props) => {
-    console.log(props.directories)
     let component = null;
     if (props.isHomepage) {
         component = <HeaderHompage imageUrl={props.imageUrl}/>
