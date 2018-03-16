@@ -10,7 +10,7 @@ const initialState = {
     category: 'Web Service',
     author: 'Spectre',
     avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
-    directories: ['Home', 'Courses'],
+    directories: [],
     cartAmount: '1',
     description: '',
     courseDetail: []
@@ -30,7 +30,8 @@ const reducer = (state = initialState, action) => {
                 courseName: action.payload.courseName,
                 courseDetail: action.payload.courseDetail,
                 directories: [
-                    ...state.directories,
+                    'Home',
+                    'Courses',
                     action.payload.courseName
                 ],
                 description: action.payload.description,
