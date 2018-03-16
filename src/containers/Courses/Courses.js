@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../../assets/css/Tooltip.css';
 import { NavLink } from 'react-router-dom';
 
@@ -10,84 +11,91 @@ import IconGrid from '../../assets/images/icon-grid.svg';
 import Course from '../../components/Course/Course';
 import Aux from '../../hoc/AuxReact/AuxReact';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
+import axios from '../../axios-elearning';
+import withErrorHandler from '../../hoc/withErrorHandler/withErrorHandler';
+import * as actions from '../../store/actions/index';
 
 class Courses extends Component {
-    state = {
-        coursespage: {
-            title: 'Courses',
-            imageUrl: 'https://i.imgur.com/DCP0DZJ.png',
-            directories: ['Home', 'Courses']
-        },
-        cartAmount: '1',
-        courses: [
-            {
-                title: 'Java Spring',
-                imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
-                author: 'Spectre',
-                avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
-                price: 30,
-                courseTime: 8,
-                lastUpdated: '12/12/2018',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
-            },
-            {
-                title: 'Java Spring',
-                imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
-                author: 'Spectre',
-                avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
-                price: 30,
-                courseTime: 8,
-                lastUpdated: '12/12/2018',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
-            },
-            {
-                title: 'Java Spring',
-                imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
-                author: 'Spectre',
-                avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
-                price: 30,
-                courseTime: 8,
-                lastUpdated: '12/12/2018',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
-            },{
-                title: 'Java Spring',
-                imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
-                author: 'Spectre',
-                avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
-                price: 30,
-                courseTime: 8,
-                lastUpdated: '12/12/2018',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
-            },{
-                title: 'Java Spring',
-                imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
-                author: 'Spectre',
-                avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
-                price: 30,
-                courseTime: 8,
-                lastUpdated: '12/12/2018',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
-            },{
-                title: 'Java Spring',
-                imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
-                author: 'Spectre',
-                avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
-                price: 30,
-                courseTime: 8,
-                lastUpdated: '12/12/2018',
-                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
-            },
-        ]
+    // state = {
+    //     coursespage: {
+    //         title: 'Courses',
+    //         imageUrl: 'https://i.imgur.com/DCP0DZJ.png',
+    //         directories: ['Home', 'Courses']
+    //     },
+    //     cartAmount: '1',
+    //     courses: [
+    //         {
+    //             title: 'Java Spring',
+    //             imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
+    //             author: 'Spectre',
+    //             avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
+    //             price: 30,
+    //             courseTime: 8,
+    //             lastUpdated: '12/12/2018',
+    //             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
+    //         },
+    //         {
+    //             title: 'Java Spring',
+    //             imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
+    //             author: 'Spectre',
+    //             avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
+    //             price: 30,
+    //             courseTime: 8,
+    //             lastUpdated: '12/12/2018',
+    //             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
+    //         },
+    //         {
+    //             title: 'Java Spring',
+    //             imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
+    //             author: 'Spectre',
+    //             avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
+    //             price: 30,
+    //             courseTime: 8,
+    //             lastUpdated: '12/12/2018',
+    //             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
+    //         },{
+    //             title: 'Java Spring',
+    //             imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
+    //             author: 'Spectre',
+    //             avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
+    //             price: 30,
+    //             courseTime: 8,
+    //             lastUpdated: '12/12/2018',
+    //             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
+    //         },{
+    //             title: 'Java Spring',
+    //             imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
+    //             author: 'Spectre',
+    //             avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
+    //             price: 30,
+    //             courseTime: 8,
+    //             lastUpdated: '12/12/2018',
+    //             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
+    //         },{
+    //             title: 'Java Spring',
+    //             imageUrl: 'http://nulledlab.com/wp-content/uploads/2016/08/Create-Website-With-Bootstrap-4-Full-Video-Course.jpg',
+    //             author: 'Spectre',
+    //             avatarUrl: 'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png',
+    //             price: 30,
+    //             courseTime: 8,
+    //             lastUpdated: '12/12/2018',
+    //             description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas magna at porttitor vehicula. Nullam augue augue.'
+    //         },
+    //     ]
+    // }
+
+    componentDidMount() {
+        this.props.onFetchCourses();
     }
 
     render() {
         return (
             <Aux>
                 <Toolbar
-                    imageUrl={this.state.coursespage.imageUrl}
-                    title={this.state.coursespage.title}
-                    cartAmount={this.state.cartAmount}
-                    directories={this.state.coursespage.directories}/>
+                    imageUrl={this.props.coursesPage.imageUrl}
+                    title={this.props.coursesPage.title}
+                    cartAmount={this.props.cartAmount}
+                    directories={this.props.coursesPage.directories}/>
                 <div className={classes.Height50} />
                 <div className={classes.CoursesSection}>
                     <div className={classes.CoursesSectionClearfix}>
@@ -132,17 +140,17 @@ class Courses extends Component {
                             </div>
 
                             <div className={classes.SectionWidth100Percentage}>
-                                {this.state.courses.map((course, index) => (
+                                {this.props.courses.map((course, index) => (
                                     <NavLink to="/courses/9">
                                         <Course
                                             key={index}
-                                            imageUrl={course.imageUrl}
-                                            lastUpdated={course.lastUpdated}
-                                            courseTime={course.courseTime}
+                                            imageUrl={'http://10.10.1.65/' + course.imageUrl}
+                                            lastUpdated={'12/12/2018'}
+                                            courseTime={8}
                                             courseTitle={course.title}
-                                            courseDescription={course.description}
-                                            authorAvatarUrl={course.avatarUrl}
-                                            authorName={course.author}
+                                            courseDescription={course.description.substring(0, 130).trim() + '...'}
+                                            authorAvatarUrl={'https://vi.seaicons.com/wp-content/uploads/2016/10/Comics-Spiderman-Morales-icon.png'}
+                                            authorName={'Spectre'}
                                             price={course.price}/>
                                     </NavLink>
                                 ))}
@@ -155,4 +163,19 @@ class Courses extends Component {
     }
 }
 
-export default Courses;
+const mapStateToProps = state => {
+    console.log("[mapStateToProps]", state.coursesReducer.courses)
+    return {
+        courses: state.coursesReducer.courses,
+        coursesPage: state.coursesReducer.coursesPage,
+        cartAmount: state.coursesReducer.cartAmount
+    }
+};
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onFetchCourses: () => dispatch(actions.fetchCourses())
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(Courses, axios));

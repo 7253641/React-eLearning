@@ -13,7 +13,7 @@ const course = (props) => {
             <div className={classes.CourseSection}>
                 <div className={classes.CourseContainer}>
                     <div className={classes.ImageSection}>
-                        <img style={{width: '100%', float: 'left'}} src={props.imageUrl} alt="MyIcon" />
+                        <img className={classes.CourseImageStyle} src={props.imageUrl} alt="MyIcon" />
                         <div className={classes.Gradient}>
                             <a className="hint--elearing" data-hint="Add To Favorities" style={{position: 'absolute', right: 0}}>
                                 <img alt="MyIcon" style={{marginRight: '60px'}} width="25" src={IconHeart} />
