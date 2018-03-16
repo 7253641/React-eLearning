@@ -2,7 +2,7 @@ import React from 'react';
 import '../../assets/css/Tooltip.css';
 import { Link } from 'react-router-dom';
 
-import classes from './Course.css';
+import classes from './CourseCardItem.css';
 import IconHeart from '../../assets/images/icon-heart.svg';
 import IconCompare from '../../assets/images/icon-compare.svg';
 import IconCalendar from '../../assets/images/icon-calendar.svg';

@@ -7,7 +7,7 @@ import IconSearch from '../../assets/images/icon-pen.svg';
 import IconSetting from '../../assets/images/icon-settings.svg';
 import IconList from '../../assets/images/icon-list.svg';
 import IconGrid from '../../assets/images/icon-grid.svg';
-import Course from '../../components/Course/Course';
+import CourseCardItem from '../../components/CourseCardItem/CourseCardItem';
 import Aux from '../../hoc/AuxReact/AuxReact';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import axios from '../../axios-elearning';
@@ -140,7 +140,7 @@ class Courses extends Component {
 
                             <div className={classes.SectionWidth100Percentage}>
                                 {this.props.courses.map((course, index) => (
-                                        <Course
+                                        <CourseCardItem
                                             key={index}
                                             courseId={course.id}
                                             imageUrl={'http://10.10.1.65/' + course.imageUrl}
