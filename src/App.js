@@ -16,7 +16,7 @@ class App extends Component {
         {/* <SingleCourse /> */}
             <Switch>
                 <Route path="/courses/9" component={SingleCourse} />
-                <Route path="/courses" exact component={Courses}/>
+                <Route path="/courses" component={Courses}/>
                 <Route path="/" component={Homepage} />
                 <Redirect to="/" />
             </Switch>

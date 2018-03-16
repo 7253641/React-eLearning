@@ -8,7 +8,7 @@ import IconSetting from '../../assets/images/icon-settings.svg';
 import IconList from '../../assets/images/icon-list.svg';
 import IconGrid from '../../assets/images/icon-grid.svg';
 import Course from '../../components/Course/Course';
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/AuxReact/AuxReact';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 
 class Courses extends Component {

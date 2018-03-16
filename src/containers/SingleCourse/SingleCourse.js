@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 import classes from './SingleCourse.css';
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/AuxReact/AuxReact';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 import CategoryImage from '../../assets/images/icon-category-grey.svg';
 import PlayIcon from '../../assets/images/icon-play.svg';

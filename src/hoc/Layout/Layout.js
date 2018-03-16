@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Aux from '../Aux/Aux';
+import Aux from '../AuxReact/AuxReact';
 import SubToolbar from '../../components/SubNavigation/SubToolbar/SubToolbar';
 import Footer from '../../components/Footer/Footer';
 

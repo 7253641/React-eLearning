@@ -3,7 +3,7 @@ import React from 'react';
 import NavigationItems from '../NavigationItems/NavigationItems';
 import classes from './Toolbar.css';
 import Logo from '../../Logo/Logo';
-import Aux from '../../../hoc/Aux/Aux';
+import Aux from '../../../hoc/AuxReact/AuxReact';
 import HeaderCover from '../../HeaderCover/HeaderCover';
 
 const toolbar = (props) => (

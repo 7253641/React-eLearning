@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import classes from './Homepage.css';
 import Category from '../../components/Category/Category';
-import Aux from '../../hoc/Aux/Aux';
+import Aux from '../../hoc/AuxReact/AuxReact';
 import Toolbar from '../../components/Navigation/Toolbar/Toolbar';
 
 class Homepage extends Component {

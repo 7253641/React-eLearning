@@ -2,7 +2,7 @@ import React from 'react';
 
 import classes from './DirectoryBar.css';
 import IconNext from '../../../../assets/images/icon-next.svg';
-import Aux from '../../../../hoc/Aux/Aux';
+import Aux from '../../../../hoc/AuxReact/AuxReact';
 
 const directoryBar = (props) => {
     return (
