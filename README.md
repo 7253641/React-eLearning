@@ -1,3 +1,6 @@
+
+![alt text](https://uphinhnhanh.com/images/2018/12/04/Screenshot-2018-12-04-181843.png)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
